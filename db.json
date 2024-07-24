@@ -1,32 +1,37 @@
 {
-    "login": [
-      {
-        "email": "nicolas@email.com",
-        "senha": "1234",
-        "id": "6a69"
-      },
-      {
-        "email": "ana@email.com",
-        "senha": "password1",
-        "id": "9811"
-      },
-      {
-        "email": "maria@email.com",
-        "senha": "abc123",
-        "id": "be7c"
-      },
-      {
-        "email": "joao@email.com",
-        "senha": "mypassword",
-        "id": "241d"
-      },
-      {
-        "email": "carla@email.com",
-        "senha": "senhaSegura",
-        "id": "976d"
-      }
-    ],
-    "cliente": [
+  "login": [
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "6a69"
+    },
+    {
+      "email": "ana@email.com",
+      "senha": "password1",
+      "id": "9811"
+    },
+    {
+      "email": "maria@email.com",
+      "senha": "abc123",
+      "id": "be7c"
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "mypassword",
+      "id": "241d"
+    },
+    {
+      "email": "carla@email.com",
+      "senha": "senhaSegura",
+      "id": "976d"
+    },
+    {
+      "id": "4acb",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    }
+  ],
+  "cliente": [
     {
       "nome": "nicolas",
       "nascimento": "09/12/2002",
