@@ -7,8 +7,10 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
+import { ErrosInterceptor } from './core/erro/erros.interceptor';
+import { ErroModule } from './core/erro/erro.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ErroModule
   ],
   providers: [
     {
@@ -28,6 +32,11 @@ import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor
       useClass: AutenticacaoInterceptor,
       multi: true
     },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrosInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

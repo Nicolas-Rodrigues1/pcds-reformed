@@ -5,13 +5,21 @@ import { AutenticacaoModule } from "./autenticacao/autenticacao.module";
 
 const routes: Routes = [
     {
+        path: 'auth',
+        loadChildren: () => import('./autenticacao/autenticacao.module').then(m => m.AutenticacaoModule)
+    },
+    {
+        path: 'auth',
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    },
+    {
         path:'',
         redirectTo: '/login',
         pathMatch: 'full'
     },
     {
-        path:'home',
-        redirectTo: '/home',
+        path: '**',
+        redirectTo: '/pagina-nao-encontrada',
         pathMatch: 'full'
     }
 ]

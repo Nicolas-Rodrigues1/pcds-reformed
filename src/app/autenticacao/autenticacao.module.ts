@@ -16,7 +16,8 @@ import { AutenticacaoRoutingModule } from "./autenticacao-routing.module";
         CommonModule,
         SharedModule,
         MaterialModule,
-        AutenticacaoRoutingModule
+        AutenticacaoRoutingModule,
+        ReactiveFormsModule
     ],
     exports:[
         CadastroComponent,
