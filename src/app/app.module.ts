@@ -7,6 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './core/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AutenticacaoInterceptor } from './autenticacao/autenticacao.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import { AppRoutingModule } from './app-routing.module';
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AutenticacaoInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

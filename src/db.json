@@ -1,0 +1,118 @@
+{
+    "login": [
+      {
+        "email": "nicolas@email.com",
+        "senha": "1234",
+        "id": "6a69"
+      },
+      {
+        "email": "ana@email.com",
+        "senha": "password1",
+        "id": "9811"
+      },
+      {
+        "email": "maria@email.com",
+        "senha": "abc123",
+        "id": "be7c"
+      },
+      {
+        "email": "joao@email.com",
+        "senha": "mypassword",
+        "id": "241d"
+      },
+      {
+        "email": "carla@email.com",
+        "senha": "senhaSegura",
+        "id": "976d"
+      }
+    ],
+    "cliente": [
+    {
+      "nome": "nicolas",
+      "nascimento": "09/12/2002",
+      "cpf": "12345678912",
+      "cep": "03050130",
+      "genero": "outro",
+      "telefone": "11940401388",
+      "email": "nicolas@email.com",
+      "confirmarEmail": "nicolas@email.com",
+      "senha": "1234",
+      "confirmarSenha": "1234",
+      "id": "eafe"
+    },
+    {
+      "nome": "mariana",
+      "nascimento": "23/05/1995",
+      "cpf": "98765432100",
+      "cep": "04567010",
+      "genero": "feminino",
+      "telefone": "11987654321",
+      "email": "mariana@email.com",
+      "confirmarEmail": "mariana@email.com",
+      "senha": "abcd",
+      "confirmarSenha": "abcd",
+      "id": "2794"
+    },
+    {
+      "nome": "joao",
+      "nascimento": "15/08/1988",
+      "cpf": "11223344556",
+      "cep": "02241001",
+      "genero": "masculino",
+      "telefone": "11901234567",
+      "email": "joao@email.com",
+      "confirmarEmail": "joao@email.com",
+      "senha": "efgh",
+      "confirmarSenha": "efgh",
+      "id": "5bf9"
+    },
+    {
+      "nome": "carla",
+      "nascimento": "30/11/1979",
+      "cpf": "66554433221",
+      "cep": "01123030",
+      "genero": "feminino",
+      "telefone": "11987651234",
+      "email": "carla@email.com",
+      "confirmarEmail": "carla@email.com",
+      "senha": "ijkl",
+      "confirmarSenha": "ijkl",
+      "id": "1cfc"
+    },
+    {
+      "nome": "pedro",
+      "nascimento": "05/02/1992",
+      "cpf": "22334455667",
+      "cep": "13040070",
+      "genero": "masculino",
+      "telefone": "11965437890",
+      "email": "pedro@email.com",
+      "confirmarEmail": "pedro@email.com",
+      "senha": "mnop",
+      "confirmarSenha": "mnop",
+      "id": "8f13"
+    }
+  ],
+  "produto": [
+    {
+      "placaMae": "asus",
+      "processador": "intel",
+      "memoriaRam": "8gb",
+      "armazenamento": "1tb",
+      "monitor": "monitor",
+      "teclado": "teclado",
+      "mouse": "mouse",
+      "id": "2486"
+    },
+    {
+      "placaMae": "gigabyte",
+      "processador": "amd",
+      "memoriaRam": "16gb",
+      "armazenamento": "500gb",
+      "monitor": "monitor",
+      "teclado": "teclado",
+      "mouse": "mouse",
+      "id": "45c7"
+    }
+  ]
+}

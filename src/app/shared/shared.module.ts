@@ -3,10 +3,14 @@ import { BannerComponent } from "./banner/banner.component";
 import { CommonModule } from "@angular/common";
 import { MaterialModule } from "../core/material/material.module";
 import { ReactiveFormsModule } from "@angular/forms";
+import { CardComponent } from './card/card.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
     declarations:[
-        BannerComponent
+        BannerComponent,
+        CardComponent,
+        ContainerComponent
     ],
     imports:[
         CommonModule,
@@ -14,7 +18,9 @@ import { ReactiveFormsModule } from "@angular/forms";
         ReactiveFormsModule
     ],
     exports:[
-        BannerComponent
+        BannerComponent,
+        CardComponent,
+        ContainerComponent
     ]
 })
 
