@@ -5,22 +5,27 @@ import { MaterialModule } from "../core/material/material.module";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CardComponent } from './card/card.component';
 import { ContainerComponent } from './container/container.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { AutenticacaoRoutingModule } from "../autenticacao/autenticacao-routing.module";
 
 @NgModule({
     declarations:[
         BannerComponent,
         CardComponent,
-        ContainerComponent
+        ContainerComponent,
+        SidenavComponent
     ],
     imports:[
         CommonModule,
         MaterialModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AutenticacaoRoutingModule
     ],
     exports:[
         BannerComponent,
         CardComponent,
-        ContainerComponent
+        ContainerComponent,
+        SidenavComponent
     ]
 })
 

@@ -6,11 +6,13 @@ import { MaterialModule } from "../core/material/material.module";
 import { CadastroComponent } from "./cadastro/cadastro.component";
 import { LoginComponent } from "./login/login.component";
 import { AutenticacaoRoutingModule } from "./autenticacao-routing.module";
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
     declarations:[
         CadastroComponent,
-        LoginComponent
+        LoginComponent,
+        ProdutoComponent
     ],
     imports:[
         CommonModule,
@@ -21,7 +23,8 @@ import { AutenticacaoRoutingModule } from "./autenticacao-routing.module";
     ],
     exports:[
         CadastroComponent,
-        LoginComponent
+        LoginComponent,
+        ProdutoComponent
     ]
 })
 

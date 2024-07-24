@@ -1,0 +1,16 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+        <p>Cadastros</p>
+            <ul class="lista-links">
+                <li><a routerLink="/auth/cadastro"><u>Cliente</u></a></li>
+                <li><a routerLink="/auth/produto"><u>Produto</u></a></li>
+            </ul>
+            <p>Pedido de venda</p>
+            <ul class="lista-links">
+                <li><a routerLink="/auth/pedidos-venda"><u>Pedido</u></a></li>
+            </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
