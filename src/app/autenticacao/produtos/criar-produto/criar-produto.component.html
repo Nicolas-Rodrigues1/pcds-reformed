@@ -1,5 +1,26 @@
 <app-container>
     <mat-card>
-        <form [formGroup]="produtoForm"></form>
+        <form>
+            <label for="nome">Nome do produto</label>
+            <input type="textarea" class="input" id="nome" name="nome" placeholder="Digite o nome"
+                [(ngModel)]="produto.nome">
+            <input type="text" class="input" id="categoria" name="categoria" placeholder="Digite a categoria"
+                [(ngModel)]="produto.categoria">
+            <!-- <label for="categoria">Categoria</label>
+            <select class="input" id="categoria" name="categoria" [(ngModel)]="produto.categoria">
+                <option value="" disabled selected>Selecione a categoria</option>
+                <option value="processador">Processador</option>
+                <option value="placaMae">Placa Mãe</option>
+                <option value="memoriaRam">Memória RAM</option>
+                <option value="armazenamento">Armazenamento</option>
+                <option value="monitor">Monitor</option>
+                <option value="mouse">Mouse</option>
+                <option value="teclado">Teclado</option>
+            </select> -->
+            <div>
+                <button (click)="criarProduto()">Salvar</button>
+                <button (click)="cancelar()">Cancelar</button>
+            </div>
+        </form>
     </mat-card>
 </app-container>

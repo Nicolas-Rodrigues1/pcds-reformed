@@ -12,6 +12,7 @@ import { ListarProdutoComponent } from './produtos/listar-produto/listar-produto
 import { CriarProdutoComponent } from './produtos/criar-produto/criar-produto.component';
 import { EditarProdutoComponent } from './produtos/editar-produto/editar-produto.component';
 import { ExcluirProdutoComponent } from './produtos/excluir-produto/excluir-produto.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ExcluirProdutoComponent } from './produtos/excluir-produto/excluir-prod
         SharedModule,
         MaterialModule,
         AutenticacaoRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
     exports:[
         CadastroComponent,

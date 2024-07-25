@@ -1,14 +1,24 @@
 {
   "produtos": [
     {
-      "id":1,
+      "id": "1",
       "categoria": "processador",
       "nome": "intel"
     },
     {
-      "id":2,
+      "id": "2",
       "categoria": "processador",
       "nome": "amd"
+    },
+    {
+      "id": "e796",
+      "categoria": "placaMae",
+      "nome": "Intel"
+    },
+    {
+      "id": "57d5",
+      "categoria": "Processador",
+      "nome": "Intel"
     }
   ],
   "login": [
