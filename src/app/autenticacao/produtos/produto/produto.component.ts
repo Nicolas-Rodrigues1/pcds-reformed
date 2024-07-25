@@ -12,7 +12,7 @@ export class ProdutoComponent implements OnInit{
   listaProdutos: Produto[] = [];
 
   @Input() produto: Produto = {
-    id: 0,
+    id: 'teste',
     categoria: 'categoria teste',
     nome: 'nome teste'
   }

@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ExcluirProdutoComponent implements OnInit{
 
   produto: Produto = {
-    id: 0,
+    id: '',
     nome: '',
     categoria: ''
   }
@@ -24,7 +24,7 @@ export class ExcluirProdutoComponent implements OnInit{
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id')
-    this.produtoService.buscarPorId(parseInt(id!)).subscribe((produto) => {
+    this.produtoService.buscarPorId(id!).subscribe((produto) => {
       this.produto = produto;
     })
   }

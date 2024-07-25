@@ -1,16 +1,5 @@
 {
-  "produtos": [
-    {
-      "id": "e796",
-      "categoria": "placaMae",
-      "nome": "Intel"
-    },
-    {
-      "id": "57d5",
-      "categoria": "Processador",
-      "nome": "Intel"
-    }
-  ],
+  "produtos": [],
   "login": [
     {
       "email": "nicolas@email.com",
@@ -41,6 +30,11 @@
       "id": "4acb",
       "email": "nicolas@email.com",
       "senha": "1234"
+    },
+    {
+      "id": "eee6",
+      "email": "nicolas@email.com",
+      "senha": "123"
     }
   ],
   "cliente": [

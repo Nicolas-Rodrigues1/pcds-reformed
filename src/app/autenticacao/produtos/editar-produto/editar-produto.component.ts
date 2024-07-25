@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditarProdutoComponent implements OnInit{
   
   produto: Produto = {
-    id: 0,
+    id: '',
     categoria: '',
     nome: ''
   }
@@ -24,7 +24,7 @@ export class EditarProdutoComponent implements OnInit{
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id')
-    this.produtoService.buscarPorId(parseInt(id!)).subscribe((produto) => {
+    this.produtoService.buscarPorId(id!).subscribe((produto) => {
       this.produto = produto
     })
   }

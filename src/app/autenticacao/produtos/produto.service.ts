@@ -19,7 +19,7 @@ export class ProdutoService {
     return this.http.post<Produto>(this.apiUrl, produto)
   }
 
-  excluir(id: number): Observable<Produto>{
+  excluir(id: string): Observable<Produto>{
     const url = `${this.apiUrl}/${id}`
     return this.http.delete<Produto>(url)
   }
@@ -29,7 +29,7 @@ export class ProdutoService {
     return this.http.put<Produto>(url, produto)
   }
 
-  buscarPorId(id: number): Observable<Produto>{
+  buscarPorId(id: string): Observable<Produto>{
     const url = `${this.apiUrl}/${id}`
     return this.http.get<Produto>(url)
   }

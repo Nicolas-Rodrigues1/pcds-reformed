@@ -25,12 +25,12 @@ export class CriarProdutoComponent implements OnInit{
 
   criarProduto(){
     this.produtoService.criar(this.produto).subscribe(() => {
-      this.router.navigate(['/auth/produto'])
+      this.router.navigate(['/auth/produtos'])
     })
     console.log(this.produto)
   }
 
   cancelar() {
-    this.router.navigate(['/auth/produto'])
+    this.router.navigate(['/auth/produtos'])
   }
 }
