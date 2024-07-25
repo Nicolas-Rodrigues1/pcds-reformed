@@ -6,6 +6,7 @@ import { ProdutoComponent } from "./produtos/produto/produto.component";
 import { ListarProdutoComponent } from "./produtos/listar-produto/listar-produto.component";
 import { CriarProdutoComponent } from "./produtos/criar-produto/criar-produto.component";
 import { ExcluirProdutoComponent } from "./produtos/excluir-produto/excluir-produto.component";
+import { EditarProdutoComponent } from "./produtos/editar-produto/editar-produto.component";
 
 const routes: Routes = [
     {
@@ -31,6 +32,10 @@ const routes: Routes = [
     {
         path:'produtos/excluirProduto/:id',
         component: ExcluirProdutoComponent
+    },
+    {
+        path:'produtos/editarProduto/:id',
+        component: EditarProdutoComponent
     }
 ]
 

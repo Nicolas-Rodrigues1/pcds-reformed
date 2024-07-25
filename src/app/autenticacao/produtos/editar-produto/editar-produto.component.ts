@@ -29,4 +29,14 @@ export class EditarProdutoComponent implements OnInit{
     })
   }
 
+  editarProduto(){
+    this.produtoService.editar(this.produto).subscribe(()=>{
+      this.router.navigate(['/auth/produtos'])
+    })
+  }
+
+  cancelar() {
+    this.router.navigate(['/auth/produtos'])
+  }
+
 }

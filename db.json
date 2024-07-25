@@ -1,5 +1,11 @@
 {
-  "produtos": [],
+  "produtos": [
+    {
+      "id": "4eb6",
+      "categoria": "Placa de vídeo",
+      "nome": "gtx"
+    }
+  ],
   "login": [
     {
       "email": "nicolas@email.com",
