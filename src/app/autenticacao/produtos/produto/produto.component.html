@@ -1,4 +1,8 @@
 <div>
+    <button routerLink="/auth/criarProduto">Adicionar Produto</button>
+</div>
+
+<div *ngFor="let produto of listaProdutos">
     <p>{{ produto.categoria }}</p>
     <p>{{ produto.nome }}</p>
 </div>

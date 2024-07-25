@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Produto } from '../produto';
+import { ProdutoService } from '../produto.service';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { Produto } from '../produto';
   styleUrls: ['./produto.component.scss']
 })
 export class ProdutoComponent implements OnInit{
+  listaProdutos: Produto[] = [];
 
   @Input() produto: Produto = {
     id: 0,
@@ -15,9 +17,12 @@ export class ProdutoComponent implements OnInit{
     nome: 'nome teste'
   }
 
-  constructor(){}
+  constructor(private produtoService: ProdutoService){}
 
   ngOnInit():void {
+    this.produtoService.listar().subscribe((listaProdutos) => {
+      this.listaProdutos = listaProdutos
+    })
   }
 
 }
