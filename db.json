@@ -1,4 +1,16 @@
 {
+  "produtos": [
+    {
+      "id":1,
+      "categoria": "processador",
+      "nome": "intel"
+    },
+    {
+      "id":2,
+      "categoria": "processador",
+      "nome": "amd"
+    }
+  ],
   "login": [
     {
       "email": "nicolas@email.com",
@@ -96,28 +108,6 @@
       "senha": "mnop",
       "confirmarSenha": "mnop",
       "id": "8f13"
-    }
-  ],
-  "produto": [
-    {
-      "placaMae": "asus",
-      "processador": "intel",
-      "memoriaRam": "8gb",
-      "armazenamento": "1tb",
-      "monitor": "monitor",
-      "teclado": "teclado",
-      "mouse": "mouse",
-      "id": "2486"
-    },
-    {
-      "placaMae": "gigabyte",
-      "processador": "amd",
-      "memoriaRam": "16gb",
-      "armazenamento": "500gb",
-      "monitor": "monitor",
-      "teclado": "teclado",
-      "mouse": "mouse",
-      "id": "45c7"
     }
   ]
 }
