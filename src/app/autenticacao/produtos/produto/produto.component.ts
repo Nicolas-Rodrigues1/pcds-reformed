@@ -11,6 +11,7 @@ import { ProdutoService } from '../produto.service';
 export class ProdutoComponent implements OnInit{
   listaProdutos: Produto[] = [];
 
+  @Input() title = 'Como gostaria de manejar os produtos?';
   @Input() produto: Produto = {
     id: 'teste',
     categoria: 'categoria teste',

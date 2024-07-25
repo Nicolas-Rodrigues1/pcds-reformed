@@ -1,9 +1,14 @@
 {
   "produtos": [
     {
-      "id": "4eb6",
-      "categoria": "Placa de vídeo",
-      "nome": "gtx"
+      "id": "4b4a",
+      "categoria": "Processador",
+      "nome": "Intel"
+    },
+    {
+      "id": "9bb8",
+      "categoria": "teste",
+      "nome": "Teste"
     }
   ],
   "login": [
@@ -41,6 +46,11 @@
       "id": "eee6",
       "email": "nicolas@email.com",
       "senha": "123"
+    },
+    {
+      "id": "a594",
+      "email": "nicolas@email.com",
+      "senha": "1234"
     }
   ],
   "cliente": [
