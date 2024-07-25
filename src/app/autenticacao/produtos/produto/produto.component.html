@@ -2,7 +2,13 @@
     <button routerLink="/auth/criarProduto">Adicionar Produto</button>
 </div>
 
+
 <div *ngFor="let produto of listaProdutos">
-    <p>{{ produto.nome }}</p>
-    <p>{{ produto.categoria }}</p>
+        <p>{{ produto.nome }}</p>
+        <p>{{ produto.categoria }}</p>
+    <div>
+        <button routerLink="/auth/produtos/excluirProduto/{{produto.id}}">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
 </div>

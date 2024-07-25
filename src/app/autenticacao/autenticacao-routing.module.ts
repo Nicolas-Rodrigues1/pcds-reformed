@@ -5,6 +5,7 @@ import { CadastroComponent } from "./cadastro/cadastro.component";
 import { ProdutoComponent } from "./produtos/produto/produto.component";
 import { ListarProdutoComponent } from "./produtos/listar-produto/listar-produto.component";
 import { CriarProdutoComponent } from "./produtos/criar-produto/criar-produto.component";
+import { ExcluirProdutoComponent } from "./produtos/excluir-produto/excluir-produto.component";
 
 const routes: Routes = [
     {
@@ -16,7 +17,7 @@ const routes: Routes = [
         component: CadastroComponent
     },
     {
-        path:'produto',
+        path:'produtos',
         component: ProdutoComponent
     },
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path:'criarProduto',
         component: CriarProdutoComponent
+    },
+    {
+        path:'produtos/excluirProduto/:id',
+        component: ExcluirProdutoComponent
     }
 ]
 

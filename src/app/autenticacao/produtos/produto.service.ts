@@ -18,4 +18,19 @@ export class ProdutoService {
   criar(produto: Produto): Observable<Produto>{
     return this.http.post<Produto>(this.apiUrl, produto)
   }
+
+  excluir(id: number): Observable<Produto>{
+    const url = `${this.apiUrl}/${id}`
+    return this.http.delete<Produto>(url)
+  }
+
+  editar(produto: Produto): Observable<Produto>{
+    const url = `${this.apiUrl}/${produto.id}`
+    return this.http.put<Produto>(url, produto)
+  }
+
+  buscarPorId(id: number): Observable<Produto>{
+    const url = `${this.apiUrl}/${id}`
+    return this.http.get<Produto>(url)
+  }
 }

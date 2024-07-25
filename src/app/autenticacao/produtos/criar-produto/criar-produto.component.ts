@@ -27,6 +27,7 @@ export class CriarProdutoComponent implements OnInit{
     this.produtoService.criar(this.produto).subscribe(() => {
       this.router.navigate(['/auth/produto'])
     })
+    console.log(this.produto)
   }
 
   cancelar() {
