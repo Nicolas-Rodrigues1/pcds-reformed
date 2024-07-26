@@ -1,12 +1,23 @@
 .sidenav-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    // right: 0;
-}
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  // right: 0;
+  .sidenav {
+    width: 150px;
+    color: white;
 
-.lista-links {
+    .grid-container {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+    }
+  }
+
+  .lista-links {
     li {
       a {
         color: white;
@@ -15,9 +26,23 @@
           text-decoration: underline;
         }
         u {
-          text-decoration: none; 
+          text-decoration: none;
         }
       }
     }
-  }
+
+    .mat-sidenav-content {
+      padding: 16px;
+      transition: margin-left 0.3s ease; // Animação suave ao abrir/fechar sidenav
   
+      &.mat-drawer-opened {
+        margin-left: 250px; // Desloca o conteúdo para a direita quando a sidenav estiver aberta
+      }
+  
+      button {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  }
+

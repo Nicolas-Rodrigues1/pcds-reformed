@@ -6,9 +6,44 @@
       "nome": "Intel"
     },
     {
-      "id": "9bb8",
-      "categoria": "teste",
-      "nome": "Teste"
+      "id": "6393",
+      "categoria": "Placa mae",
+      "nome": "Asus"
+    },
+    {
+      "id": "42f9",
+      "categoria": "Placa Mãe",
+      "nome": "Gigabyte"
+    },
+    {
+      "id": "04c8",
+      "categoria": "Armazenamento",
+      "nome": "HD 500gb"
+    },
+    {
+      "id": "2176",
+      "categoria": "Armazenamento",
+      "nome": "HD 1TB"
+    },
+    {
+      "id": "1ee8",
+      "categoria": "Memória Ram",
+      "nome": "8gb"
+    },
+    {
+      "id": "ef9b",
+      "categoria": "Memória Ram",
+      "nome": "16GB"
+    },
+    {
+      "id": "716a",
+      "categoria": "Monitor",
+      "nome": "Dell"
+    },
+    {
+      "id": "8d8d",
+      "categoria": "Mouse",
+      "nome": "Logitech"
     }
   ],
   "login": [
@@ -49,6 +84,66 @@
     },
     {
       "id": "a594",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "ab86",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "b283",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "9fa7",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "eeca",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "cbcc",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "6f42",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "d472",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "588a",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "98bf",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "9bab",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "85b4",
+      "email": "nicolas@email.com",
+      "senha": "1234"
+    },
+    {
+      "id": "dce7",
       "email": "nicolas@email.com",
       "senha": "1234"
     }
