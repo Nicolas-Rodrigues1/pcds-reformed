@@ -190,16 +190,6 @@
       "email": "ana@email.com",
       "telefone": "3134567890",
       "genero": "feminino"
-    },
-    {
-      "id": "4",
-      "nome": "Ana",
-      "nascimento": "05/02/1995",
-      "cpf": "55667788999",
-      "cep": "30120020",
-      "email": "ana@email.com",
-      "telefone": "3134567890",
-      "genero": "feminino"
     }
   ]
 }
