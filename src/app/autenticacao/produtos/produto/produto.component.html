@@ -6,8 +6,8 @@
         <mat-card-content>
             <div class="grid-container">
                 <div *ngFor="let produto of listaProdutos" class="grid-item">
-                    <p>{{ produto.nome }}</p>
-                    <p>{{ produto.categoria }}</p>
+                    <p>Nome: {{ produto.nome }}</p>
+                    <p>Categoria: {{ produto.categoria }}</p>
                     <div>
                         <button mat-icon-button [routerLink]="'/auth/produtos/excluirProduto/' + produto.id">
                             <mat-icon>delete</mat-icon>

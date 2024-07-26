@@ -73,82 +73,17 @@
       "id": "976d"
     },
     {
-      "id": "4acb",
+      "id": "b545",
       "email": "nicolas@email.com",
       "senha": "1234"
     },
     {
-      "id": "eee6",
-      "email": "nicolas@email.com",
-      "senha": "123"
-    },
-    {
-      "id": "a594",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "ab86",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "b283",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "9fa7",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "eeca",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "cbcc",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "6f42",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "d472",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "588a",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "98bf",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "9bab",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "85b4",
-      "email": "nicolas@email.com",
-      "senha": "1234"
-    },
-    {
-      "id": "dce7",
+      "id": "3750",
       "email": "nicolas@email.com",
       "senha": "1234"
     }
   ],
-  "cliente": [
+  "cadastros": [
     {
       "nome": "nicolas",
       "nascimento": "09/12/2002",
@@ -213,6 +148,58 @@
       "senha": "mnop",
       "confirmarSenha": "mnop",
       "id": "8f13"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "Pedro",
+      "nascimento": "03/12/2001",
+      "cpf": "12345678912",
+      "cep": "12030240",
+      "email": "pedro@email.com",
+      "telefone": "11934352983",
+      "genero": "masculino"
+    },
+    {
+      "id": "2",
+      "nome": "Maria",
+      "nascimento": "15/06/1985",
+      "cpf": "98765432100",
+      "cep": "11020340",
+      "email": "maria@email.com",
+      "telefone": "1134567890",
+      "genero": "feminino"
+    },
+    {
+      "id": "3",
+      "nome": "João",
+      "nascimento": "22/09/1990",
+      "cpf": "11223344556",
+      "cep": "22040050",
+      "email": "joao@email.com",
+      "telefone": "1198765432",
+      "genero": "masculino"
+    },
+    {
+      "id": "4",
+      "nome": "Ana",
+      "nascimento": "05/02/1995",
+      "cpf": "55667788999",
+      "cep": "30120020",
+      "email": "ana@email.com",
+      "telefone": "3134567890",
+      "genero": "feminino"
+    },
+    {
+      "id": "4",
+      "nome": "Ana",
+      "nascimento": "05/02/1995",
+      "cpf": "55667788999",
+      "cep": "30120020",
+      "email": "ana@email.com",
+      "telefone": "3134567890",
+      "genero": "feminino"
     }
   ]
 }

@@ -13,6 +13,11 @@ import { CriarProdutoComponent } from './produtos/criar-produto/criar-produto.co
 import { EditarProdutoComponent } from './produtos/editar-produto/editar-produto.component';
 import { ExcluirProdutoComponent } from './produtos/excluir-produto/excluir-produto.component';
 import { FormsModule } from '@angular/forms';
+import { CriarClienteComponent } from './clientes/criar-cliente/criar-cliente.component';
+import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
+import { ListarClienteComponent } from './clientes/listar-cliente/listar-cliente.component';
+import { ExcluirClienteComponent } from './clientes/excluir-cliente/excluir-cliente.component';
+import { ClienteComponent } from './clientes/cliente/cliente.component';
 
 
 @NgModule({
@@ -23,7 +28,12 @@ import { FormsModule } from '@angular/forms';
         ListarProdutoComponent,
         CriarProdutoComponent,
         EditarProdutoComponent,
-        ExcluirProdutoComponent
+        ExcluirProdutoComponent,
+        CriarClienteComponent,
+        EditarClienteComponent,
+        ListarClienteComponent,
+        ExcluirClienteComponent,
+        ClienteComponent
     ],
     imports:[
         CommonModule,

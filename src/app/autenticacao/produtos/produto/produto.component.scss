@@ -16,6 +16,10 @@ app-container {
       border-radius: 8px; 
       background-color: #555555;
 
+      p{
+        color: white;
+      }
+
       mat-form-field {
         width: 100%;
       }
@@ -51,6 +55,7 @@ app-container {
     margin-bottom: 32px;
     margin-top: 40px;
     color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
 
   mat-card-actions {
