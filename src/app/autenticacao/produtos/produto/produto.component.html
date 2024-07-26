@@ -17,6 +17,11 @@
                         </button>
                     </div>
                 </div>
+                <div class="paginacao">
+                    <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+                    <span>Página {{ page }}</span>
+                    <button (click)="proximaPagina()">Próxima Página</button>
+                </div>
             </div>
         </mat-card-content>
         <div class="buttonAdicionar">

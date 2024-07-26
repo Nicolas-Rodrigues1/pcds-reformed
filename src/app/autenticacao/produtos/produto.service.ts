@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Produto } from './produto';
@@ -11,10 +11,14 @@ export class ProdutoService {
 
   constructor(private http: HttpClient) { }
 
-  listar(): Observable<Produto[]>{
-    return this.http.get<Produto[]>(this.apiUrl)
-  }
+  listar(page: number, pageSize: number): Observable<Produto[]> {
+    const params = new HttpParams()
+      .set('_page', page.toString())
+      .set('_limit', pageSize.toString());
 
+    return this.http.get<Produto[]>(this.apiUrl, { params });
+  }
+  
   criar(produto: Produto): Observable<Produto>{
     return this.http.post<Produto>(this.apiUrl, produto)
   }
@@ -33,4 +37,6 @@ export class ProdutoService {
     const url = `${this.apiUrl}/${id}`
     return this.http.get<Produto>(url)
   }
+
+  
 }

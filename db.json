@@ -43,8 +43,164 @@
     {
       "id": "8d8d",
       "categoria": "Mouse",
+      "nome": "Razer3"
+    },
+    {
+      "id": "4b4a",
+      "categoria": "Processador",
+      "nome": "Intel"
+    },
+    {
+      "id": "6393",
+      "categoria": "Placa mae",
+      "nome": "Asus"
+    },
+    {
+      "id": "42f9",
+      "categoria": "Placa Mãe",
+      "nome": "Gigabyte"
+    },
+    {
+      "id": "04c8",
+      "categoria": "Armazenamento",
+      "nome": "HD 500gb"
+    },
+    {
+      "id": "2176",
+      "categoria": "Armazenamento",
+      "nome": "HD 1TB"
+    },
+    {
+      "id": "1ee8",
+      "categoria": "Memória Ram",
+      "nome": "8gb"
+    },
+    {
+      "id": "ef9b",
+      "categoria": "Memória Ram",
+      "nome": "16GB"
+    },
+    {
+      "id": "716a",
+      "categoria": "Monitor",
+      "nome": "Dell"
+    },
+    {
+      "id": "8d8d",
+      "categoria": "Mouse",
+      "nome": "Razer"
+    },
+    {
+      "id": "b2a5",
+      "categoria": "Teclado",
       "nome": "Logitech"
+    },
+    {
+      "id": "f4b3",
+      "categoria": "Processador",
+      "nome": "AMD Ryzen 7"
+    },
+    {
+      "id": "27c9",
+      "categoria": "Placa de Vídeo",
+      "nome": "NVIDIA GTX 1660"
+    },
+    {
+      "id": "9b6f",
+      "categoria": "Placa de Vídeo",
+      "nome": "AMD Radeon RX 580"
+    },
+    {
+      "id": "c1d2",
+      "categoria": "SSD",
+      "nome": "Samsung 1TB"
+    },
+    {
+      "id": "a4e3",
+      "categoria": "SSD",
+      "nome": "Kingston 512GB"
+    },
+    {
+      "id": "5d6a",
+      "categoria": "Fonte de Alimentação",
+      "nome": "Corsair 650W"
+    },
+    {
+      "id": "e7b8",
+      "categoria": "Gabinete",
+      "nome": "NZXT H510"
+    },
+    {
+      "id": "3f9b",
+      "categoria": "Headset",
+      "nome": "HyperX Cloud II"
+    },
+    {
+      "id": "d8c0",
+      "categoria": "Webcam",
+      "nome": "Logitech C920"
+    },
+    {
+      "id": "0a1f",
+      "categoria": "Placa Mãe",
+      "nome": "MSI B450"
+    },
+    {
+      "id": "2b3d",
+      "categoria": "Cooler",
+      "nome": "Cooler Master Hyper 212"
+    },
+    {
+      "id": "1c4e",
+      "categoria": "Monitor",
+      "nome": "LG Ultrawide"
+    },
+    {
+      "id": "4e5f",
+      "categoria": "Mousepad",
+      "nome": "SteelSeries QcK"
+    },
+    {
+      "id": "8f7b",
+      "categoria": "Memória Ram",
+      "nome": "Corsair Vengeance 32GB"
+    },
+    {
+      "id": "6g9a",
+      "categoria": "Processador",
+      "nome": "Intel i5-10400F"
+    },
+    {
+      "id": "7h1c",
+      "categoria": "Placa de Vídeo",
+      "nome": "NVIDIA RTX 3070"
+    },
+    {
+      "id": "3j2e",
+      "categoria": "SSD",
+      "nome": "Western Digital 2TB"
+    },
+    {
+      "id": "9k4g",
+      "categoria": "Placa Mãe",
+      "nome": "ASRock B550"
+    },
+    {
+      "id": "5l6h",
+      "categoria": "Fonte de Alimentação",
+      "nome": "EVGA 750W"
+    },
+    {
+      "id": "8m9j",
+      "categoria": "Headset",
+      "nome": "Razer Kraken"
+    },
+    {
+      "id": "4n1k",
+      "categoria": "Gabinete",
+      "nome": "Cooler Master MB511"
     }
+    
   ],
   "login": [
     {

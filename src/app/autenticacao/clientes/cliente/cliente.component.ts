@@ -10,7 +10,7 @@ import { ClienteService } from '../cliente.service';
 export class ClienteComponent implements OnInit{
   listaClientes: Cliente[] = [];
 
-  @Input() title = 'Como gostaria de manejar os produtos?'
+  @Input() title = 'Como gostaria de manejar os clientes?'
   @Input() cliente: Cliente = {
     id: '',
     nome: 'teste',

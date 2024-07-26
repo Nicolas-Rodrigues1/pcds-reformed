@@ -10,20 +10,37 @@ import { ProdutoService } from '../produto.service';
 })
 export class ProdutoComponent implements OnInit{
   listaProdutos: Produto[] = [];
+  page: number = 1;
+  pageSize: number = 12;
 
   @Input() title = 'Como gostaria de manejar os produtos?';
   @Input() produto: Produto = {
-    id: 'teste',
-    categoria: 'categoria teste',
-    nome: 'nome teste'
+    id: '',
+    categoria: '',
+    nome: ''
   }
 
   constructor(private produtoService: ProdutoService){}
 
   ngOnInit():void {
-    this.produtoService.listar().subscribe((listaProdutos) => {
-      this.listaProdutos = listaProdutos
-    })
+    this.listarProdutos();
   }
 
+  listarProdutos(): void{
+    this.produtoService.listar(this.page, this.pageSize).subscribe((listaProdutos) => {
+      this.listaProdutos = listaProdutos
+    })  
+  }
+
+  proximaPagina(): void{
+    this.page++;
+    this.listarProdutos();
+  }
+
+  paginaAnterior(): void{
+    if (this.page > 1) {
+      this.page--;
+      this.listarProdutos();
+    }
+  }
 }
