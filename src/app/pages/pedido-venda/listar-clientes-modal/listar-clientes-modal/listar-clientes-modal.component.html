@@ -1,0 +1,17 @@
+<app-container>
+    <mat-card>
+        <mat-card-content>
+            <div class="grid-container">
+                <div *ngFor="let cliente of listaClientes" class="grid-item">
+                    <p>Nome: {{ cliente.nome }}</p>
+                    <p>Email: {{ cliente.email }}</p>
+                    <p>CPF: {{ cliente.cpf }}</p>
+                    <p>Telefone: {{ cliente.telefone }}</p>
+                </div>
+            </div>
+        </mat-card-content>
+        <div class="buttonAdicionar">
+            <button mat-stroked-button>Selecionar cliente</button>
+        </div>
+    </mat-card>
+</app-container>

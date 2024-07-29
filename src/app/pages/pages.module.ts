@@ -5,10 +5,12 @@ import { SharedModule } from "../shared/shared.module";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "../core/material/material.module";
 import { PagesRoutingModule } from "./pages-routing.module";
+import { ListarClientesModalComponent } from './pedido-venda/listar-clientes-modal/listar-clientes-modal/listar-clientes-modal.component';
 
 @NgModule({
     declarations:[
-        PedidoVendaComponent
+        PedidoVendaComponent,
+        ListarClientesModalComponent
     ],
     imports:[
         CommonModule,
