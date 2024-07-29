@@ -1,100 +1,64 @@
 app-container {
-    width: 70%;
-    margin: 32px auto 48px;   
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Centraliza verticalmente
+}
+
+mat-card {
+  width: 80%; // Largura do card
+  max-width: 600px; // Largura máxima do card
+  margin: auto; // Centraliza horizontalmente
+  padding: 16px;
+  background-color: #555555; // Cor de fundo do card
+  border-radius: 8px; // Bordas arredondadas
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra
+
+  mat-card-content {
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      grid-gap: 16px; 
-      margin-bottom: 32px; 
-  
-      .grid-item {
-        display: flex;
-        flex-direction: column;
-        padding: 16px; 
-        border: 1px solid #ddd; 
-        border-radius: 8px; 
-        background-color: #555555;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Configura a grade responsiva
+      gap: 16px; // Espaçamento entre os itens
 
-        p{
-          color: white;
+      .grid-item {
+        background-color: #555555; // Cor de fundo dos itens
+        border: 1px solid #e0e0e0; // Borda dos itens
+        border-radius: 8px; // Bordas arredondadas dos itens
+        padding: 16px; // Espaçamento interno dos itens
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra dos itens
+        cursor: pointer; // Cursor de mão para indicar que o item é clicável
+        transition: transform 0.2s, box-shadow 0.2s; // Transição suave para efeitos de hover
+
+        &:hover {
+          transform: scale(1.05); // Aumenta o tamanho no hover
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Aumenta a sombra no hover
         }
-  
-        mat-form-field {
-          width: 100%;
+
+        p {
+          margin: 8px 0; // Espaçamento entre os parágrafos
+          color: #ffffff; // Cor do texto
+          font-size: 14px; // Tamanho da fonte
         }
-  
-        .radio-group {
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 18px;
-        }
-  
-        .drop-container {
-          margin-bottom: 16px;
-  
-          .custom-error {
-            font-size: 12px;
-            margin-left: 12px;
+
+        button {
+          background-color: #007bff; // Cor de fundo do botão
+          color: white; // Cor do texto do botão
+          border: none; // Remove a borda padrão do botão
+          border-radius: 4px; // Bordas arredondadas do botão
+          padding: 8px 12px; // Espaçamento interno do botão
+          font-size: 14px; // Tamanho da fonte do botão
+          cursor: pointer; // Cursor de mão ao passar o mouse
+          transition: background-color 0.3s; // Transição suave para a cor de fundo
+
+          &:hover {
+            background-color: #0056b3; // Cor de fundo ao passar o mouse
+          }
+
+          mat-icon {
+            vertical-align: middle; // Alinha o ícone verticalmente ao meio
           }
         }
       }
     }
-  
-    .buttonAdicionar {
-      display: flex;
-      justify-content: center; 
-      margin-top: 20px; 
-      margin-bottom: 20px;
-    }
-  
-    mat-card-title {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 32px;
-      margin-top: 40px;
-      color: white;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    }
-  
-    mat-card-actions {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 32px;
-  
-      button {
-        margin: 0 8px;
-      }
-    }
-  
-    mat-divider {
-      margin: 0 16px;
-      border-top-color: #79747E;
-      margin-top: 24px;
-    }
-  
-    h2 {
-      font-weight: 400;
-      font-size: 22px;
-      color: white;
-      margin-left: 16px;
-    }
-  
-    .btn-editar {
-      background: #E6E0E9;
-    }
-  
-    button {
-      img {
-        vertical-align: middle;
-      }
-    }
-  
-    @media (max-width: 600px) {
-      .grid-container {
-        grid-template-columns: 1fr; 
-      }
-    }
   }
-  
+}

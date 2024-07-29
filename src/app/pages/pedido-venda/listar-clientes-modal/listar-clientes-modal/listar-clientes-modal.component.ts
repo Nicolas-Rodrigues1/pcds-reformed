@@ -31,4 +31,9 @@ export class ListarClientesModalComponent implements OnInit{
     })
   }
 
+  selecionarCliente(cliente: Cliente){
+    this.clienteService.selecionarCliente(cliente)
+    // console.log(cliente)
+  }
+
 }

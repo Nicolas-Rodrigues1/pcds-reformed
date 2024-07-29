@@ -1,8 +1,12 @@
-
-<app-banner src="assets/imagens/pedido.png" alt="Banner pedido de venda">
-</app-banner>
-<button (click)="openDialog()">Abrir Modal Aqui</button>
+<app-sidenav>
+</app-sidenav>
 <app-container>
     <mat-card>
+        <button (click)="openDialog()">Selecionar cliente para realizar o pedido</button>
     </mat-card>
+    <div *ngIf="clienteSelecionado">
+        <h2>Cliente selecionado</h2>
+        <p>Nome: {{clienteSelecionado.nome}}</p>
+        <p>Email: {{clienteSelecionado.email}}</p>
+    </div>
 </app-container>

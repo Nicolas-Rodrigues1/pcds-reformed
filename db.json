@@ -2,7 +2,7 @@
   "produtos": [
     {
       "id": "4b4a",
-      "categoria": "Processador",
+      "categoria": "processador",
       "nome": "Intel"
     },
     {
@@ -194,6 +194,11 @@
       "id": "8m9j",
       "categoria": "Headset",
       "nome": "Razer Kraken"
+    },
+    {
+      "categoria": "memoriaRam",
+      "nome": "",
+      "id": "EhID15g"
     }
   ],
   "login": [
@@ -241,6 +246,16 @@
       "email": "nicolas@email.com",
       "senha": "1234",
       "id": "_x-x7D6"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "Zb-gG5V"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "no8Vix5"
     }
   ],
   "cadastros": [

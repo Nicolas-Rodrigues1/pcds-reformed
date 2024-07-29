@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Cliente } from './cliente';
 
 @Injectable({
@@ -8,8 +8,14 @@ import { Cliente } from './cliente';
 })
 export class ClienteService {
   private apiUrl = 'http://localhost:3000/clientes'
+  private clienteSelecionadoSubject = new BehaviorSubject<Cliente | null>(null);
+  clienteSelecionado$ = this.clienteSelecionadoSubject.asObservable();
 
   constructor(private http: HttpClient) { }
+
+  selecionarCliente(cliente: Cliente){
+    this.clienteSelecionadoSubject.next(cliente)
+  }
 
   listar(): Observable<Cliente[]>{
     return this.http.get<Cliente[]>(this.apiUrl)

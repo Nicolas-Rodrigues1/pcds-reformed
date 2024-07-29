@@ -7,11 +7,10 @@
                     <p>Email: {{ cliente.email }}</p>
                     <p>CPF: {{ cliente.cpf }}</p>
                     <p>Telefone: {{ cliente.telefone }}</p>
+                    <button (click)="selecionarCliente(cliente)" mat-dialog-close><mat-icon>check_circle</mat-icon></button>
                 </div>
             </div>
         </mat-card-content>
-        <div class="buttonAdicionar">
-            <button mat-stroked-button>Selecionar cliente</button>
-        </div>
+        
     </mat-card>
 </app-container>
