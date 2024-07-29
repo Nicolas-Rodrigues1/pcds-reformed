@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-excluir-cliente',
@@ -23,7 +24,8 @@ export class ExcluirClienteComponent implements OnInit{
   constructor(
     private clienteService: ClienteService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit(): void {
@@ -38,6 +40,8 @@ export class ExcluirClienteComponent implements OnInit{
       this.clienteService.excluir(this.cliente.id).subscribe(() =>{
         this.router.navigate(['/auth/clientes'])
       })
+      const mensagemClienteExcluido = 'Cliente excluído com sucesso'
+      this.mensagemService.openSnackBar(mensagemClienteExcluido)
     }
   }
 

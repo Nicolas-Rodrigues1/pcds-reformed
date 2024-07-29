@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
 import { Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-criar-produto',
@@ -12,12 +13,13 @@ export class CriarProdutoComponent implements OnInit{
   
   produto: Produto = {
     categoria: '',
-    nome: ''
+    nome: '',
   }
 
   constructor(
     private produtoService: ProdutoService,
     private router: Router,
+    private mensagemService: MensagemService 
   ){}
 
   ngOnInit() {
@@ -28,6 +30,8 @@ export class CriarProdutoComponent implements OnInit{
       this.router.navigate(['/auth/produtos'])
     })
     console.log(this.produto)
+    const mensagemProdutoCriado = 'Produto criado com sucesso!'
+    this.mensagemService.openSnackBar(mensagemProdutoCriado)
   }
 
   cancelar() {

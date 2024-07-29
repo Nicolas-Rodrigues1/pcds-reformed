@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-editar-produto',
@@ -19,7 +20,8 @@ export class EditarProdutoComponent implements OnInit{
   constructor(
     private produtoService: ProdutoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit() {
@@ -33,6 +35,8 @@ export class EditarProdutoComponent implements OnInit{
     this.produtoService.editar(this.produto).subscribe(()=>{
       this.router.navigate(['/auth/produtos'])
     })
+    const mensagemProdutoAlterado = 'Produto alterado com sucesso!'
+    this.mensagemService.openSnackBar(mensagemProdutoAlterado)
   }
 
   cancelar() {

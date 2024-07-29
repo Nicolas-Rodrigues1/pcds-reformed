@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-editar-cliente',
@@ -23,7 +24,8 @@ export class EditarClienteComponent implements OnInit{
   constructor(
     private clienteService: ClienteService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit(): void {
@@ -37,6 +39,8 @@ export class EditarClienteComponent implements OnInit{
     this.clienteService.editar(this.cliente).subscribe(() =>{
       this.router.navigate(['/auth/clientes'])
     })
+    const mensagemClienteEditado = 'Cliente editado com sucesso'
+    this.mensagemService.openSnackBar(mensagemClienteEditado)
   }
 
   cancelar() {

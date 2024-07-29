@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-excluir-produto',
@@ -19,7 +20,8 @@ export class ExcluirProdutoComponent implements OnInit{
   constructor(
     private produtoService: ProdutoService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit() {
@@ -34,6 +36,8 @@ export class ExcluirProdutoComponent implements OnInit{
       this.produtoService.excluir(this.produto.id).subscribe(() => {
         this.router.navigate(['/auth/produtos'])
       })
+      const mensagemProdutoExcluido = 'Produto excluido com sucesso!'
+      this.mensagemService.openSnackBar(mensagemProdutoExcluido)
     }
   }
 

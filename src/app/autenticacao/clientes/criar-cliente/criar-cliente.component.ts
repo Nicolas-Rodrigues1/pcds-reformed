@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import { Router } from '@angular/router';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-criar-cliente',
@@ -23,7 +24,8 @@ export class CriarClienteComponent implements OnInit{
 
   constructor(
     private clienteService: ClienteService,
-    private router: Router
+    private router: Router,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit(): void {
@@ -33,6 +35,8 @@ export class CriarClienteComponent implements OnInit{
     this.clienteService.criar(this.cliente).subscribe(()=>{
       this.router.navigate(['/auth/clientes'])
     })
+    const mensagemClienteCriado = 'Cliente criado com sucesso'
+    this.mensagemService.openSnackBar(mensagemClienteCriado)
   }
 
   cancelar(){
