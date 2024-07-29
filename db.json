@@ -194,13 +194,7 @@
       "id": "8m9j",
       "categoria": "Headset",
       "nome": "Razer Kraken"
-    },
-    {
-      "id": "4n1k",
-      "categoria": "Gabinete",
-      "nome": "Cooler Master MB511"
     }
-    
   ],
   "login": [
     {
@@ -242,6 +236,11 @@
       "id": "0d69",
       "email": "nicolas@email.com",
       "senha": "1234"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "_x-x7D6"
     }
   ],
   "cadastros": [
@@ -347,7 +346,7 @@
       "nome": "Ana",
       "nascimento": "05/02/1995",
       "cpf": "55667788999",
-      "cep": "30120020",
+      "cep": "30120021",
       "email": "ana@email.com",
       "telefone": "3134567890",
       "genero": "feminino"
