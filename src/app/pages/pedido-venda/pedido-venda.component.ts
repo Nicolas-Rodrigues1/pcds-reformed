@@ -5,6 +5,8 @@ import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 import { Cliente } from 'src/app/autenticacao/clientes/cliente';
 import { ProdutoService } from 'src/app/autenticacao/produtos/produto.service';
 import { Produto } from 'src/app/autenticacao/produtos/produto';
+import { Pedido } from './pedido';
+import { ConfirmarPedidoModalComponent } from './confirmar-pedido-modal/confirmar-pedido-modal.component';
 
 @Component({
   selector: 'app-pedido-venda',
@@ -15,6 +17,7 @@ export class PedidoVendaComponent implements OnInit{
   clienteSelecionado: Cliente | null = null;
 
   listaProdutos: Produto[] = [];
+  listaPedidos: Pedido[] = []
   page: number = 1;
   pageSize: number = 12;
 
@@ -34,9 +37,21 @@ export class PedidoVendaComponent implements OnInit{
     });
   }
 
+  selecionarProduto(produto: Produto){
+    this.produtoService.selecionarProduto(produto)
+    // console.log(produto)
+    this.modalConfirmarPedido()
+  }
+
   openDialog(){
     this.dialog.open(ListarClientesModalComponent,{
       width: '50%'
+    });
+  }
+
+  modalConfirmarPedido(){
+    this.dialog.open(ConfirmarPedidoModalComponent,{
+      width:'50%'
     });
   }
 
@@ -58,5 +73,9 @@ export class PedidoVendaComponent implements OnInit{
       this.listarProdutos();
     }
   }
+
+  // adicionarProduto(){
+  //   this.
+  // }
 
 }

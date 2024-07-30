@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { MaterialModule } from "../core/material/material.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { ListarClientesModalComponent } from './pedido-venda/listar-clientes-modal/listar-clientes-modal/listar-clientes-modal.component';
+import { ConfirmarPedidoModalComponent } from './pedido-venda/confirmar-pedido-modal/confirmar-pedido-modal.component';
 
 @NgModule({
     declarations:[
         PedidoVendaComponent,
-        ListarClientesModalComponent
+        ListarClientesModalComponent,
+        ConfirmarPedidoModalComponent
     ],
     imports:[
         CommonModule,

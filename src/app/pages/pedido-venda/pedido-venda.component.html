@@ -15,6 +15,7 @@
                 <div *ngFor="let produto of listaProdutos" class="grid-item">
                     <p>Nome: {{ produto.nome }}</p>
                     <p>Categoria: {{ produto.categoria }}</p>
+                    <button class="add-button" (click)="selecionarProduto(produto)"><mat-icon>add</mat-icon></button>
                 </div>
             </div>
             <div class="paginacao">

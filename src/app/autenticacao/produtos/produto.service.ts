@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Produto } from './produto';
 
 @Injectable({
@@ -8,8 +8,14 @@ import { Produto } from './produto';
 })
 export class ProdutoService {
   private apiUrl = 'http://localhost:3000/produtos'
+  private produtoSelecionadoSubject = new BehaviorSubject<Produto | null>(null)
+  produtoSelecionado$ = this.produtoSelecionadoSubject.asObservable();
 
   constructor(private http: HttpClient) { }
+
+  selecionarProduto(produto: Produto){
+    this.produtoSelecionadoSubject.next(produto)
+  }
 
   listar(page: number, pageSize: number): Observable<Produto[]> {
     const params = new HttpParams()

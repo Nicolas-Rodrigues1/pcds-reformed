@@ -381,5 +381,10 @@
       "telefone": "3134567890",
       "genero": "feminino"
     }
+  ], "pedidos":[
+    {
+      "id":"1",
+      "status":"processando"
+    }
   ]
 }

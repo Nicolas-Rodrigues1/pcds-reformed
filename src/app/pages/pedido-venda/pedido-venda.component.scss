@@ -70,6 +70,25 @@ app-container {
         margin: 4px 0; // Espaçamento entre os parágrafos
       }
 
+      button {
+        padding: 3px 6px; // Espaçamento interno dos botões
+        border: none; // Remove bordas padrão dos botões
+        border-radius: 3px; // Bordas arredondadas para os botões
+        font-size: 8px; // Tamanho da fonte dos botões
+        cursor: pointer; // Cursor de mão ao passar o mouse sobre o botão
+        transition: background-color 0.3s; // Transição suave para a cor de fundo
+        margin: 1px;
+
+        &.add-button {
+          background-color: #28a745; // Cor de fundo para o botão Salvar
+          color: white; // Cor do texto para o botão Salvar
+
+          &:hover {
+            background-color: #218838; // Cor de fundo ao passar o mouse
+          }
+        }
+      }
+
       .button-container {
         display: flex;
         justify-content: space-between; // Espaça os botões uniformemente
