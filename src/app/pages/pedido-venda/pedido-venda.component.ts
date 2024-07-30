@@ -7,6 +7,8 @@ import { ProdutoService } from 'src/app/autenticacao/produtos/produto.service';
 import { Produto } from 'src/app/autenticacao/produtos/produto';
 import { Pedido } from './pedido';
 import { ConfirmarPedidoModalComponent } from './confirmar-pedido-modal/confirmar-pedido-modal.component';
+import { PedidoService } from './pedido.service';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
 
 @Component({
   selector: 'app-pedido-venda',
@@ -15,6 +17,9 @@ import { ConfirmarPedidoModalComponent } from './confirmar-pedido-modal/confirma
 })
 export class PedidoVendaComponent implements OnInit{
   clienteSelecionado: Cliente | null = null;
+  produtoSelecionado: Produto | null = null;
+  status: string = 'Pendente';
+  idPedido: number = 1;
 
   listaProdutos: Produto[] = [];
   listaPedidos: Pedido[] = []
@@ -24,7 +29,9 @@ export class PedidoVendaComponent implements OnInit{
   constructor(
     private dialog: MatDialog,
     private clienteService: ClienteService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private pedidoService: PedidoService,
+    private mensagemService: MensagemService
   ){}
 
   ngOnInit(): void {
@@ -38,8 +45,8 @@ export class PedidoVendaComponent implements OnInit{
   }
 
   selecionarProduto(produto: Produto){
-    this.produtoService.selecionarProduto(produto)
-    // console.log(produto)
+    this.produtoSelecionado = produto;
+    console.log(produto)
     this.modalConfirmarPedido()
   }
 
@@ -49,11 +56,19 @@ export class PedidoVendaComponent implements OnInit{
     });
   }
 
-  modalConfirmarPedido(){
-    this.dialog.open(ConfirmarPedidoModalComponent,{
-      width:'50%'
+  modalConfirmarPedido() {
+    const dialogRef = this.dialog.open(ConfirmarPedidoModalComponent, {
+      width: '50%',
+      data: { produto: this.produtoSelecionado }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'confirmar') {
+        this.realizarPedido();
+      }
     });
   }
+  
 
   listarProdutos(){
     this.produtoService.listar(this.page, this.pageSize).subscribe((listaProdutos) => {
@@ -74,8 +89,21 @@ export class PedidoVendaComponent implements OnInit{
     }
   }
 
-  // adicionarProduto(){
-  //   this.
-  // }
+  realizarPedido(){
+    console.log(this.clienteSelecionado)
+    console.log(this.produtoSelecionado)
+    if(this.clienteSelecionado && this.produtoSelecionado){
+      const novoPedido: Pedido = {
+        idPedido: this.idPedido++,
+        status: this.status,
+        cliente: this.clienteSelecionado,
+        produto: this.produtoSelecionado
+      };
+
+      this.pedidoService.criarPedido(novoPedido).subscribe((response) => {
+        console.log('Pedido realizado com sucesso', response)
+      })
+    }
+  }
 
 }

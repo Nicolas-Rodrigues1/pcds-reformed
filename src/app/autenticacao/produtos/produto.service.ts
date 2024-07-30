@@ -8,14 +8,8 @@ import { Produto } from './produto';
 })
 export class ProdutoService {
   private apiUrl = 'http://localhost:3000/produtos'
-  private produtoSelecionadoSubject = new BehaviorSubject<Produto | null>(null)
-  produtoSelecionado$ = this.produtoSelecionadoSubject.asObservable();
 
   constructor(private http: HttpClient) { }
-
-  selecionarProduto(produto: Produto){
-    this.produtoSelecionadoSubject.next(produto)
-  }
 
   listar(page: number, pageSize: number): Observable<Produto[]> {
     const params = new HttpParams()

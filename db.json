@@ -271,6 +271,11 @@
       "email": "nicolas@email.com",
       "senha": "1234",
       "id": "Eb0Q-Yy"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "NpAZeQS"
     }
   ],
   "cadastros": [
@@ -381,10 +386,87 @@
       "telefone": "3134567890",
       "genero": "feminino"
     }
-  ], "pedidos":[
+  ],
+  "pedidos": [
     {
-      "id":"1",
-      "status":"processando"
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "6393",
+        "categoria": "Placa mae",
+        "nome": "Asus"
+      },
+      "id": 1
+    },
+    {
+      "idPedido": 2,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "04c8",
+        "categoria": "Armazenamento",
+        "nome": "HD 500gb"
+      },
+      "id": 2
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "6393",
+        "categoria": "Placa mae",
+        "nome": "Asus"
+      },
+      "id": 3
+    },
+    {
+      "idPedido": 2,
+      "status": "Pendente",
+      "cliente": {
+        "id": "3",
+        "nome": "João",
+        "nascimento": "22/09/1990",
+        "cpf": "11223344556",
+        "cep": "22040050",
+        "email": "joao@email.com",
+        "telefone": "1198765432",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "4b4a",
+        "categoria": "Processador",
+        "nome": "Intel"
+      },
+      "id": 4
     }
   ]
 }
