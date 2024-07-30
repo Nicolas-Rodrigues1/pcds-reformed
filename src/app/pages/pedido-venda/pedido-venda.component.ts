@@ -22,7 +22,9 @@ export class PedidoVendaComponent implements OnInit{
   idPedido: number = 1;
 
   listaProdutos: Produto[] = [];
+  produtosFiltrados: Produto[] = [];
   listaPedidos: Pedido[] = []
+  categoriaSelecionada: string = '';
   page: number = 1;
   pageSize: number = 12;
 
@@ -73,6 +75,8 @@ export class PedidoVendaComponent implements OnInit{
   listarProdutos(){
     this.produtoService.listar(this.page, this.pageSize).subscribe((listaProdutos) => {
       this.listaProdutos = listaProdutos
+      this.filtrarProdutos()
+      console.log(this.produtosFiltrados)
       // console.log(listaProdutos)
     })
   }
@@ -88,6 +92,21 @@ export class PedidoVendaComponent implements OnInit{
       this.listarProdutos();
     }
   }
+
+  onCategoriaChange(event: any){
+    this.categoriaSelecionada = event.target.value;
+    // console.log(event)
+    this.filtrarProdutos();
+  }
+
+  filtrarProdutos(){
+    if (this.categoriaSelecionada) {
+      this.produtosFiltrados = this.listaProdutos.filter(produto => produto.categoria === this.categoriaSelecionada);
+    } else {
+      this.produtosFiltrados = [...this.listaProdutos];
+    }
+  }
+
 
   realizarPedido(){
     console.log(this.clienteSelecionado)

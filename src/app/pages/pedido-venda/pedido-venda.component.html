@@ -11,8 +11,21 @@
     </div>
     <div *ngIf="clienteSelecionado">
         <mat-card-content>
+            <div>
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" (change)="onCategoriaChange($event)">
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="processador">Processador</option>
+                    <option value="placaMae">Placa Mãe</option>
+                    <option value="memoriaRam">Memória RAM</option>
+                    <option value="armazenamento">Armazenamento</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="teclado">Teclado</option>
+                </select>
+            </div>
             <div class="grid-container">
-                <div *ngFor="let produto of listaProdutos" class="grid-item">
+                <div *ngFor="let produto of produtosFiltrados" class="grid-item">
                     <p>Nome: {{ produto.nome }}</p>
                     <p>Categoria: {{ produto.categoria }}</p>
                     <button class="add-button" (click)="selecionarProduto(produto)"><mat-icon>add</mat-icon></button>
