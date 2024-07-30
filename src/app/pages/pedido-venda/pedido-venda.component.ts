@@ -121,6 +121,7 @@ export class PedidoVendaComponent implements OnInit{
 
       this.pedidoService.criarPedido(novoPedido).subscribe((response) => {
         console.log('Pedido realizado com sucesso', response)
+        this.mensagemService.openSnackBar('Pedido realizado com sucesso')
       })
     }
   }

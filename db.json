@@ -417,6 +417,46 @@
         "nome": "Intel"
       },
       "id": 4
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "6393",
+        "categoria": "placaMae",
+        "nome": "Asus"
+      },
+      "id": 5
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "2b3c",
+        "categoria": "memoriaRam",
+        "nome": "Corsair 16GB"
+      },
+      "id": 6
     }
   ]
 }
