@@ -4,9 +4,24 @@
     <mat-card>
         <button (click)="openDialog()">Selecionar cliente para realizar o pedido</button>
     </mat-card>
-    <div *ngIf="clienteSelecionado">
+    <div *ngIf="clienteSelecionado" class="cliente-info">
         <h2>Cliente selecionado</h2>
         <p>Nome: {{clienteSelecionado.nome}}</p>
         <p>Email: {{clienteSelecionado.email}}</p>
+    </div>
+    <div *ngIf="clienteSelecionado">
+        <mat-card-content>
+            <div class="grid-container">
+                <div *ngFor="let produto of listaProdutos" class="grid-item">
+                    <p>Nome: {{ produto.nome }}</p>
+                    <p>Categoria: {{ produto.categoria }}</p>
+                </div>
+            </div>
+            <div class="paginacao">
+                <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+                <span>Página {{ page }}</span>
+                <button (click)="proximaPagina()">Próxima Página</button>
+            </div>
+        </mat-card-content>
     </div>
 </app-container>

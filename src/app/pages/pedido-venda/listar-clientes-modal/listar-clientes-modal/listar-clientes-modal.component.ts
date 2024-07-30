@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Cliente } from 'src/app/autenticacao/clientes/cliente';
 import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 
@@ -24,7 +24,7 @@ export class ListarClientesModalComponent implements OnInit{
   constructor(
     private clienteService: ClienteService
   ){}
-
+  
   ngOnInit(): void {
     this.clienteService.listar().subscribe((listaClientes) =>{
       this.listaClientes = listaClientes

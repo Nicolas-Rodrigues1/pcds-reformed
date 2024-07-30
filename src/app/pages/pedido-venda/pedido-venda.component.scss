@@ -32,7 +32,7 @@ app-container {
     }
   }
 
-  div {
+  .cliente-info {
     width: 100%;
     max-width: 600px; // Largura máxima da seção de cliente selecionado
     background-color: #ffffff; // Cor de fundo
@@ -51,6 +51,77 @@ app-container {
       font-size: 16px; // Tamanho da fonte dos parágrafos
       color: #666; // Cor do texto dos parágrafos
       margin: 8px 0; // Espaçamento entre os parágrafos
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 colunas iguais
+    gap: 16px; // Espaçamento entre os itens
+    max-width: 1200px; // Largura máxima da grid
+
+    .grid-item {
+      background-color: #f9f9f9;
+      border-radius: 8px; // Bordas arredondadas
+      padding: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra
+
+      p {
+        margin: 4px 0; // Espaçamento entre os parágrafos
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between; // Espaça os botões uniformemente
+        margin-top: 8px; // Espaçamento superior para os botões
+
+        button {
+          background-color: transparent; // Remove a cor de fundo
+          border: none; // Remove a borda padrão
+          cursor: pointer; // Cursor de mão ao passar o mouse
+
+          mat-icon {
+            color: #007bff; // Cor do ícone
+          }
+
+          &:hover mat-icon {
+            color: #0056b3; // Cor do ícone ao passar o mouse
+          }
+        }
+      }
+    }
+  }
+
+  .paginacao {
+    margin: 10px;
+    display: flex;
+    justify-content: center; // Centraliza os botões de paginação
+    align-items: center;
+    gap: 16px; // Espaçamento entre os elementos
+
+    button {
+      background-color: #007bff; // Cor de fundo dos botões de paginação
+      color: white; // Cor do texto dos botões de paginação
+      border: none; // Remove a borda padrão dos botões de paginação
+      border-radius: 4px; // Bordas arredondadas dos botões de paginação
+      padding: 8px 12px; // Espaçamento interno dos botões de paginação
+      font-size: 14px; // Tamanho da fonte dos botões de paginação
+      cursor: pointer; // Cursor de mão ao passar o mouse
+      transition: background-color 0.3s; // Transição suave para a cor de fundo
+
+      &:hover {
+        background-color: #0056b3; // Cor de fundo ao passar o mouse
+      }
+
+      &:disabled {
+        background-color: #ccc; // Cor de fundo ao desabilitar o botão
+        cursor: not-allowed; // Cursor ao desabilitar o botão
+      }
+    }
+
+    span {
+      font-size: 16px; // Tamanho da fonte do número da página
+      color: #666; // Cor do texto do número da página
     }
   }
 }
