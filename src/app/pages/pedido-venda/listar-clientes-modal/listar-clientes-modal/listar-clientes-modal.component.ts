@@ -12,7 +12,7 @@ export class ListarClientesModalComponent implements OnInit{
   listaClientesFiltrados: Cliente[] = []
   nomeDigitado: string = '';
   page: number = 1;
-  pageSize: number = 12;
+  pageSize: number = 6;
 
   @Input() cliente: Cliente = {
     id: '',
@@ -30,6 +30,10 @@ export class ListarClientesModalComponent implements OnInit{
   ){}
   
   ngOnInit(): void {
+    this.listarClientes()
+  }
+
+  listarClientes(){
     this.clienteService.listar(this.page, this.pageSize).subscribe((listaClientes) =>{
       this.listaClientes = listaClientes
       this.listaClientesFiltrados = listaClientes
@@ -54,6 +58,18 @@ export class ListarClientesModalComponent implements OnInit{
   selecionarCliente(cliente: Cliente){
     this.clienteService.selecionarCliente(cliente)
     // console.log(cliente)
+  }
+
+  proximaPagina(): void{
+    this.page++;
+    this.listarClientes();
+  }
+
+  paginaAnterior(): void{
+    if (this.page > 1) {
+      this.page--;
+      this.listarClientes();
+    }
   }
 
 }

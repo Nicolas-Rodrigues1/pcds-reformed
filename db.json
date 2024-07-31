@@ -511,6 +511,33 @@
         }
       ],
       "id": 2
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "3",
+        "nome": "João",
+        "nascimento": "22/09/1990",
+        "cpf": "11223344556",
+        "cep": "22040050",
+        "email": "joao@email.com",
+        "telefone": "1198765432",
+        "genero": "masculino"
+      },
+      "produto": [
+        {
+          "id": "6393",
+          "categoria": "placaMae",
+          "nome": "Asus"
+        },
+        {
+          "id": "7g8h",
+          "categoria": "processador",
+          "nome": "Intel i5"
+        }
+      ],
+      "id": 3
     }
   ]
 }

@@ -96,5 +96,31 @@ app-container {
         grid-template-columns: 1fr; 
       }
     }
+
+    .paginacao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+    
+      button {
+        margin: 0 8px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    
+      span {
+        margin: 0 8px;
+      }
+    }
   }
   
