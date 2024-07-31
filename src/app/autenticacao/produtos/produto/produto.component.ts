@@ -60,7 +60,7 @@ export class ProdutoComponent implements OnInit{
   }
 
   openEditar(){
-    console.log(this.produtoSelecionado)
+
     const dialogRef = this.dialog.open(EditarProdutoComponent,{
       width: '50%',
       data: { produto: this.produtoSelecionado }

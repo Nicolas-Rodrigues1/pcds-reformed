@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
+import { MatDialog } from '@angular/material/dialog';
+import { MensagemService } from 'src/app/core/services/mensagem.service';
+import { ExcluirClienteComponent } from '../excluir-cliente/excluir-cliente.component';
+import { EditarClienteComponent } from '../editar-cliente/editar-cliente.component';
 
 @Component({
   selector: 'app-cliente',
@@ -9,6 +13,7 @@ import { ClienteService } from '../cliente.service';
 })
 export class ClienteComponent implements OnInit{
   listaClientes: Cliente[] = [];
+  clienteSelecionado: Cliente | null = null;
   page: number = 1;
   pageSize: number = 8;
 
@@ -24,7 +29,11 @@ export class ClienteComponent implements OnInit{
     genero: ''
   }
 
-  constructor(private clienteService: ClienteService){}
+  constructor(
+    private clienteService: ClienteService,
+    private dialog: MatDialog,
+    private mensagemService: MensagemService
+  ){}
 
   ngOnInit(): void {
     this.listarClientes();
@@ -33,6 +42,37 @@ export class ClienteComponent implements OnInit{
   listarClientes(): void{
     this.clienteService.listar(this.page, this.pageSize).subscribe((listaClientes) =>{
       this.listaClientes = listaClientes
+    })
+  }
+
+  selecionarCliente(cliente: Cliente){
+    this.clienteSelecionado = cliente
+  }
+
+  openExcluir(){
+    const dialogRef = this.dialog.open(ExcluirClienteComponent, {
+      width: '50%',
+      data: { cliente: this.clienteSelecionado }
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result === 'excluido'){
+        this.mensagemService.openSnackBar('Cliente excluído com sucesso')
+        this.listarClientes()
+      }
+    })
+  }
+
+  openEditar(){
+    const dialogRef = this.dialog.open(EditarClienteComponent,{
+      width: '50%',
+      data: { cliente: this.clienteSelecionado }
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result === 'editado'){
+        this.mensagemService.openSnackBar('Cliente editado com sucesso')
+      }
     })
   }
 

@@ -14,10 +14,10 @@
                     <p>Genero: {{ cliente.genero }}</p>
                     <p>Data de nascimento: {{ cliente.nascimento }}</p>
                     <div>
-                        <button mat-icon-button [routerLink]="'/auth/clientes/excluirCliente/' + cliente.id">
+                        <button mat-icon-button (click)="selecionarCliente(cliente)" (click)="openExcluir()">
                             <mat-icon>delete</mat-icon>
                         </button>
-                        <button mat-icon-button [routerLink]="'/auth/clientes/editarCliente/' + cliente.id">
+                        <button mat-icon-button (click)="selecionarCliente(cliente)" (click)="openEditar()">
                             <mat-icon>edit</mat-icon>
                         </button>
                     </div>

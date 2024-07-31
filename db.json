@@ -367,16 +367,6 @@
       "genero": "feminino"
     },
     {
-      "id": "7",
-      "nome": "Júlio",
-      "nascimento": "04/07/1988",
-      "cpf": "34567890123",
-      "cep": "13000003",
-      "email": "julio@email.com",
-      "telefone": "3134567890",
-      "genero": "masculino"
-    },
-    {
       "id": "8",
       "nome": "Sofia",
       "nascimento": "29/09/1994",

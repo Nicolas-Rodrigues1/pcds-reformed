@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MensagemService } from 'src/app/core/services/mensagem.service';
+import { ExcluirClienteComponent } from '../excluir-cliente/excluir-cliente.component';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Produto } from '../../produtos/produto';
 
 @Component({
   selector: 'app-editar-cliente',
   templateUrl: './editar-cliente.component.html',
   styleUrls: ['./editar-cliente.component.scss']
 })
-export class EditarClienteComponent implements OnInit{
+export class EditarClienteComponent{
   cliente: Cliente = {
     id: '',
     nome: '',
@@ -23,28 +26,23 @@ export class EditarClienteComponent implements OnInit{
 
   constructor(
     private clienteService: ClienteService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private mensagemService: MensagemService
-  ){}
+    public dialogRef: MatDialogRef<ExcluirClienteComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: {cliente: Cliente}
+  ){
+    this.cliente = data.cliente
+  }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
-    this.clienteService.buscarPorId(id!).subscribe((cliente) => {
-      this.cliente = cliente
-    })
   }
 
   editarCliente(){
-    this.clienteService.editar(this.cliente).subscribe(() =>{
-      this.router.navigate(['/auth/clientes'])
+    this.clienteService.editar(this.cliente).subscribe(() => {
+      this.dialogRef.close('editado')
     })
-    const mensagemClienteEditado = 'Cliente editado com sucesso'
-    this.mensagemService.openSnackBar(mensagemClienteEditado)
   }
 
   cancelar() {
-    this.router.navigate(['/auth/clientes'])
+    this.dialogRef.close()
   }
 
 }

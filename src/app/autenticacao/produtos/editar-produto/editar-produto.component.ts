@@ -21,7 +21,6 @@ export class EditarProdutoComponent{
   
   constructor(
     private produtoService: ProdutoService,
-    private route: ActivatedRoute,
     public dialogRef: MatDialogRef<ExcluirProdutoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {produto: Produto}
   ){
