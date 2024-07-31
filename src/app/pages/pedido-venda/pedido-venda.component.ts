@@ -21,9 +21,10 @@ export class PedidoVendaComponent implements OnInit{
   status: string = 'Pendente';
   idPedido: number = 1;
 
+  listaProdutosCarrinho: Produto[] = []
   listaProdutos: Produto[] = [];
-  produtosFiltrados: Produto[] = [];
   listaPedidos: Pedido[] = []
+  produtosFiltrados: Produto[] = [];
   categoriaSelecionada: string = '';
   page: number = 1;
   pageSize: number = 12;
@@ -48,7 +49,7 @@ export class PedidoVendaComponent implements OnInit{
 
   selecionarProduto(produto: Produto){
     this.produtoSelecionado = produto;
-    console.log(produto)
+    // console.log(produto)
     this.modalConfirmarPedido()
   }
 
@@ -66,7 +67,7 @@ export class PedidoVendaComponent implements OnInit{
   
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirmar') {
-        this.realizarPedido();
+        this.adicionarProdutoCarrinho();
       }
     });
   }
@@ -76,7 +77,7 @@ export class PedidoVendaComponent implements OnInit{
     this.produtoService.listar(this.page, this.pageSize).subscribe((listaProdutos) => {
       this.listaProdutos = listaProdutos
       this.filtrarProdutos()
-      console.log(this.produtosFiltrados)
+      // console.log(this.produtosFiltrados)
       // console.log(listaProdutos)
     })
   }
@@ -105,6 +106,20 @@ export class PedidoVendaComponent implements OnInit{
     } else {
       this.produtosFiltrados = [...this.listaProdutos];
     }
+  }
+
+  adicionarProdutoCarrinho(){
+    console.log(this.produtoSelecionado)
+    if(this.produtoSelecionado){
+      this.listaProdutosCarrinho.push(this.produtoSelecionado);
+      this.mensagemService.openSnackBar('Produto adicionado ao carrinho')
+    }
+    console.log(this.listaProdutosCarrinho) 
+  }
+
+  removerProduto(produto: Produto){
+    const index = this.listaProdutosCarrinho.findIndex(p => p.id === produto.id)
+    this.listaProdutosCarrinho.splice(index, 1)
   }
 
 

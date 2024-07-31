@@ -231,6 +231,11 @@
       "email": "nicolas@email.com",
       "senha": "1234",
       "id": "TrWk0Hv"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "ZDtKcOS"
     }
   ],
   "cadastros": [
@@ -462,6 +467,86 @@
         "nome": "Corsair 16GB"
       },
       "id": 6
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "7g8h",
+        "categoria": "processador",
+        "nome": "Intel i5"
+      },
+      "id": 7
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "4b4a",
+        "categoria": "processador",
+        "nome": "Intel"
+      },
+      "id": 8
+    },
+    {
+      "idPedido": 2,
+      "status": "Pendente",
+      "cliente": {
+        "id": "1",
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "4b4a",
+        "categoria": "processador",
+        "nome": "Intel"
+      },
+      "id": 9
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": "3",
+        "nome": "João",
+        "nascimento": "22/09/1990",
+        "cpf": "11223344556",
+        "cep": "22040050",
+        "email": "joao@email.com",
+        "telefone": "1198765432",
+        "genero": "masculino"
+      },
+      "produto": {
+        "id": "5e6f",
+        "categoria": "teclado",
+        "nome": "Razer"
+      },
+      "id": 10
     }
   ]
 }

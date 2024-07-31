@@ -1,41 +1,54 @@
 <app-sidenav>
 </app-sidenav>
 <app-container>
-    <mat-card>
-        <button (click)="openDialog()">Selecionar cliente para realizar o pedido</button>
-    </mat-card>
-    <div *ngIf="clienteSelecionado" class="cliente-info">
-        <h2>Cliente selecionado</h2>
-        <p>Nome: {{clienteSelecionado.nome}}</p>
-        <p>Email: {{clienteSelecionado.email}}</p>
-    </div>
-    <div *ngIf="clienteSelecionado">
-        <mat-card-content>
-            <div>
-                <label for="categoria">Selecione por categoria:</label>
-                <select id="categoria" (change)="onCategoriaChange($event)">
-                    <option value="">Todas</option>
-                    <option value="processador">Processador</option>
-                    <option value="placaMae">Placa Mãe</option>
-                    <option value="memoriaRam">Memória RAM</option>
-                    <option value="armazenamento">Armazenamento</option>
-                    <option value="monitor">Monitor</option>
-                    <option value="mouse">Mouse</option>
-                    <option value="teclado">Teclado</option>
-                </select>
-            </div>
-            <div class="grid-container">
-                <div *ngFor="let produto of produtosFiltrados" class="grid-item">
-                    <p>Nome: {{ produto.nome }}</p>
-                    <p>Categoria: {{ produto.categoria }}</p>
-                    <button class="add-button" (click)="selecionarProduto(produto)"><mat-icon>add</mat-icon></button>
-                </div>
-            </div>
-            <div class="paginacao">
-                <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
-                <span>Página {{ page }}</span>
-                <button (click)="proximaPagina()">Próxima Página</button>
-            </div>
-        </mat-card-content>
-    </div>
+  <mat-card>
+    <button (click)="openDialog()">Selecionar cliente para realizar o pedido</button>
+  </mat-card>
+  <div *ngIf="clienteSelecionado" class="cliente-info">
+    <h2>Cliente selecionado</h2>
+    <p>Nome: {{clienteSelecionado.nome}}</p>
+    <p>Email: {{clienteSelecionado.email}}</p>
+  </div>
+  <div *ngIf="clienteSelecionado">
+    <mat-card-content>
+      <div>
+        <label for="categoria">Selecione por categoria:</label>
+        <select id="categoria" (change)="onCategoriaChange($event)">
+          <option value="">Todas</option>
+          <option value="processador">Processador</option>
+          <option value="placaMae">Placa Mãe</option>
+          <option value="memoriaRam">Memória RAM</option>
+          <option value="armazenamento">Armazenamento</option>
+          <option value="monitor">Monitor</option>
+          <option value="mouse">Mouse</option>
+          <option value="teclado">Teclado</option>
+        </select>
+      </div>
+      <div class="grid-container">
+        <div *ngFor="let produto of produtosFiltrados" class="grid-item">
+          <p>Nome: {{ produto.nome }}</p>
+          <p>Categoria: {{ produto.categoria }}</p>
+          <button class="add-button" (click)="selecionarProduto(produto)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="paginacao">
+        <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+        <span>Página {{ page }}</span>
+        <button (click)="proximaPagina()">Próxima Página</button>
+      </div>
+      <div class="carrinho">
+        <h2>Carrinho</h2>
+        <div class="produto-carrinho" *ngFor="let produto of listaProdutosCarrinho">
+          <p>Nome: {{ produto.nome }}</p>
+          <p>Categoria: {{ produto.categoria }}</p>
+          <button class="remove-button" (click)="removerProduto(produto)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+      <button class="realizar-pedido-button" (click)="realizarPedido()" [disabled]="listaProdutosCarrinho.length === 0">Realizar pedido</button>
+    </mat-card-content>
+  </div>
 </app-container>
