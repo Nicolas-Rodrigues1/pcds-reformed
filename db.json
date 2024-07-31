@@ -1,14 +1,9 @@
 {
   "produtos": [
     {
-      "id": "4b4a",
-      "categoria": "processador",
-      "nome": "Intel"
-    },
-    {
       "id": "6393",
       "categoria": "placaMae",
-      "nome": "Asus"
+      "nome": "Gigabyte"
     },
     {
       "id": "42f9",
@@ -39,11 +34,6 @@
       "id": "4d5e",
       "categoria": "mouse",
       "nome": "Logitech"
-    },
-    {
-      "id": "5e6f",
-      "categoria": "teclado",
-      "nome": "Razer"
     },
     {
       "id": "6f7g",

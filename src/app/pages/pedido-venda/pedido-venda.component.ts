@@ -72,7 +72,6 @@ export class PedidoVendaComponent implements OnInit{
     });
   }
   
-
   listarProdutos(){
     this.produtoService.listar(this.page, this.pageSize).subscribe((listaProdutos) => {
       this.listaProdutos = listaProdutos

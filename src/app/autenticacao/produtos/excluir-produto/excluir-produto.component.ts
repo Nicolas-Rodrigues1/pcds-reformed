@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MensagemService } from 'src/app/core/services/mensagem.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-excluir-produto',
   templateUrl: './excluir-produto.component.html',
   styleUrls: ['./excluir-produto.component.scss']
 })
-export class ExcluirProdutoComponent implements OnInit{
+export class ExcluirProdutoComponent{
 
   produto: Produto = {
     id: '',
@@ -19,30 +20,20 @@ export class ExcluirProdutoComponent implements OnInit{
 
   constructor(
     private produtoService: ProdutoService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private mensagemService: MensagemService
-  ){}
-
-  ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id')
-    this.produtoService.buscarPorId(id!).subscribe((produto) => {
-      this.produto = produto;
-    })
+    public dialogRef: MatDialogRef<ExcluirProdutoComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: {produto: Produto}
+  ){
+    this.produto = data.produto
   }
 
   excluirProduto(){
-    if(this.produto.id){
-      this.produtoService.excluir(this.produto.id).subscribe(() => {
-        this.router.navigate(['/auth/produtos'])
-      })
-      const mensagemProdutoExcluido = 'Produto excluido com sucesso!'
-      this.mensagemService.openSnackBar(mensagemProdutoExcluido)
-    }
+    this.produtoService.excluir(this.produto.id!).subscribe(() => {
+      this.dialogRef.close('excluido')
+    })
   }
 
   cancelar(){
-    this.router.navigate(['/auth/produtos'])
+    this.dialogRef.close()
   }
 
 }

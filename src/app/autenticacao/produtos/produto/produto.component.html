@@ -9,10 +9,10 @@
                     <p>Nome: {{ produto.nome }}</p>
                     <p>Categoria: {{ produto.categoria }}</p>
                     <div>
-                        <button mat-icon-button [routerLink]="'/auth/produtos/excluirProduto/' + produto.id">
+                        <button mat-icon-button (click)="selecionarProduto(produto)" (click)="openExcluir()">
                             <mat-icon>delete</mat-icon>
                         </button>
-                        <button mat-icon-button [routerLink]="'/auth/produtos/editarProduto/' + produto.id">
+                        <button mat-icon-button (click)="selecionarProduto(produto)" (click)="openEditar()">
                             <mat-icon>edit</mat-icon>
                         </button>
                     </div>
