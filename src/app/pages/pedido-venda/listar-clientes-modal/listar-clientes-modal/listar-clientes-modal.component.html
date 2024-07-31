@@ -2,7 +2,11 @@
     <mat-card>
         <mat-card-content>
             <div class="grid-container">
-                <div *ngFor="let cliente of listaClientes" class="grid-item">
+                <label >Digite o nome do cliente:</label>
+                <input type="search" id="nomeDigitado" (input)="onSearchChange($event)">
+            </div>
+            <div class="grid-container">
+                <div *ngFor="let cliente of listaClientesFiltrados" class="grid-item">
                     <p>Nome: {{ cliente.nome }}</p>
                     <p>Email: {{ cliente.email }}</p>
                     <p>CPF: {{ cliente.cpf }}</p>

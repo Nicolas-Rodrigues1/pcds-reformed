@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Cliente } from './cliente';
@@ -17,8 +17,12 @@ export class ClienteService {
     this.clienteSelecionadoSubject.next(cliente)
   }
 
-  listar(): Observable<Cliente[]>{
-    return this.http.get<Cliente[]>(this.apiUrl)
+  listar(page: number, pageSize: number): Observable<Cliente[]>{
+    const params = new HttpParams()
+      .set('_page', page.toString())
+      .set('_limit',pageSize.toString());
+
+    return this.http.get<Cliente[]>(this.apiUrl, { params })
   }
 
   criar(cliente: Cliente): Observable<Cliente>{

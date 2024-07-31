@@ -9,6 +9,10 @@ import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 })
 export class ListarClientesModalComponent implements OnInit{
   listaClientes: Cliente[] = [];
+  listaClientesFiltrados: Cliente[] = []
+  nomeDigitado: string = '';
+  page: number = 1;
+  pageSize: number = 12;
 
   @Input() cliente: Cliente = {
     id: '',
@@ -26,9 +30,25 @@ export class ListarClientesModalComponent implements OnInit{
   ){}
   
   ngOnInit(): void {
-    this.clienteService.listar().subscribe((listaClientes) =>{
+    this.clienteService.listar(this.page, this.pageSize).subscribe((listaClientes) =>{
       this.listaClientes = listaClientes
+      this.listaClientesFiltrados = listaClientes
     })
+  }
+
+  onSearchChange(event: any){
+    this.nomeDigitado = event.target.value.toLowerCase();
+    this.filtrarClientes();
+  }
+
+  filtrarClientes(): void {
+    if (!this.nomeDigitado) {
+      this.listaClientesFiltrados = this.listaClientes; // Se o campo de busca estiver vazio, mostra todos os clientes
+    } else {
+      this.listaClientesFiltrados = this.listaClientes.filter(cliente => 
+        cliente.nome.toLowerCase().includes(this.nomeDigitado)
+      );
+    }
   }
 
   selecionarCliente(cliente: Cliente){

@@ -11,12 +11,9 @@ export class ListarClienteComponent implements OnInit{
   listaClientes: Cliente[] = [];
 
   constructor(private clienteService: ClienteService){}
-  
-  
   ngOnInit(): void {
-    this.clienteService.listar().subscribe((listaClientes) => {
-      this.listaClientes = listaClientes
-    })
+    throw new Error('Method not implemented.');
   }
+  
 
 }

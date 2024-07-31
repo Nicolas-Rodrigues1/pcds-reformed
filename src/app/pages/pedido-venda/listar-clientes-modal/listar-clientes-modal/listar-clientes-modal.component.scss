@@ -15,7 +15,12 @@ mat-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra
 
   mat-card-content {
+    label{
+      color: #ffffff;
+    }
+
     .grid-container {
+      margin: 5px;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Configura a grade responsiva
       gap: 16px; // Espaçamento entre os itens

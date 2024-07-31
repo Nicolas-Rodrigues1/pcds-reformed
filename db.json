@@ -236,6 +236,16 @@
       "email": "nicolas@email.com",
       "senha": "1234",
       "id": "ZDtKcOS"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "eMTfzy_"
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": "95BMWhG"
     }
   ],
   "cadastros": [
@@ -344,6 +354,106 @@
       "cep": "30120021",
       "email": "ana@email.com",
       "telefone": "3134567890",
+      "genero": "feminino"
+    },
+    {
+      "id": "5",
+      "nome": "Roberto",
+      "nascimento": "15/02/1982",
+      "cpf": "12345678901",
+      "cep": "11000001",
+      "email": "roberto@email.com",
+      "telefone": "1123456789",
+      "genero": "masculino"
+    },
+    {
+      "id": "6",
+      "nome": "Cláudia",
+      "nascimento": "22/03/1990",
+      "cpf": "23456789012",
+      "cep": "12000002",
+      "email": "claudia@email.com",
+      "telefone": "2123456789",
+      "genero": "feminino"
+    },
+    {
+      "id": "7",
+      "nome": "Júlio",
+      "nascimento": "04/07/1988",
+      "cpf": "34567890123",
+      "cep": "13000003",
+      "email": "julio@email.com",
+      "telefone": "3134567890",
+      "genero": "masculino"
+    },
+    {
+      "id": "8",
+      "nome": "Sofia",
+      "nascimento": "29/09/1994",
+      "cpf": "45678901234",
+      "cep": "14000004",
+      "email": "sofia@email.com",
+      "telefone": "4145678901",
+      "genero": "feminino"
+    },
+    {
+      "id": "9",
+      "nome": "Miguel",
+      "nascimento": "11/11/1980",
+      "cpf": "56789012345",
+      "cep": "15000005",
+      "email": "miguel@email.com",
+      "telefone": "5156789012",
+      "genero": "masculino"
+    },
+    {
+      "id": "10",
+      "nome": "Luana",
+      "nascimento": "16/12/1992",
+      "cpf": "67890123456",
+      "cep": "16000006",
+      "email": "luana@email.com",
+      "telefone": "6167890123",
+      "genero": "feminino"
+    },
+    {
+      "id": "11",
+      "nome": "André",
+      "nascimento": "20/05/1985",
+      "cpf": "78901234567",
+      "cep": "17000007",
+      "email": "andre@email.com",
+      "telefone": "7178901234",
+      "genero": "masculino"
+    },
+    {
+      "id": "12",
+      "nome": "Tatiane",
+      "nascimento": "05/09/1989",
+      "cpf": "89012345678",
+      "cep": "18000008",
+      "email": "tatiane@email.com",
+      "telefone": "8189012345",
+      "genero": "feminino"
+    },
+    {
+      "id": "13",
+      "nome": "Paulo",
+      "nascimento": "26/06/1991",
+      "cpf": "90123456789",
+      "cep": "19000009",
+      "email": "paulo@email.com",
+      "telefone": "9190123456",
+      "genero": "masculino"
+    },
+    {
+      "id": "14",
+      "nome": "Isabela",
+      "nascimento": "03/04/1993",
+      "cpf": "01234567890",
+      "cep": "20000010",
+      "email": "isabela@email.com",
+      "telefone": "0201234567",
       "genero": "feminino"
     }
   ],
