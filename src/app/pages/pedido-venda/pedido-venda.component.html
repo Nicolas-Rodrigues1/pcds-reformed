@@ -12,9 +12,9 @@
     <div *ngIf="clienteSelecionado">
         <mat-card-content>
             <div>
-                <label for="categoria">Categoria:</label>
+                <label for="categoria">Selecione por categoria:</label>
                 <select id="categoria" (change)="onCategoriaChange($event)">
-                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="">Todas</option>
                     <option value="processador">Processador</option>
                     <option value="placaMae">Placa Mãe</option>
                     <option value="memoriaRam">Memória RAM</option>
