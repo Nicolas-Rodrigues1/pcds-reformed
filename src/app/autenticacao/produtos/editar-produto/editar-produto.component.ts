@@ -1,8 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MensagemService } from 'src/app/core/services/mensagem.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ExcluirProdutoComponent } from '../excluir-produto/excluir-produto.component';
 

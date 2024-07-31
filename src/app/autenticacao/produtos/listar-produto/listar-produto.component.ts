@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Produto } from '../produto';
 
 @Component({
   selector: 'app-listar-produto',
@@ -7,7 +6,5 @@ import { Produto } from '../produto';
   styleUrls: ['./listar-produto.component.scss']
 })
 export class ListarProdutoComponent{
-
-  constructor(){}
 
 }

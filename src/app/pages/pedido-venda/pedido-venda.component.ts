@@ -18,16 +18,16 @@ import { MensagemService } from 'src/app/core/services/mensagem.service';
 export class PedidoVendaComponent implements OnInit{
   clienteSelecionado: Cliente | null = null;
   produtoSelecionado: Produto | null = null;
-  status: string = 'Pendente';
-  idPedido: number = 1;
+  status = 'Pendente';
+  idPedido = 1;
 
   listaProdutosCarrinho: Produto[] = []
   listaProdutos: Produto[] = [];
   listaPedidos: Pedido[] = []
   produtosFiltrados: Produto[] = [];
-  categoriaSelecionada: string = '';
-  page: number = 1;
-  pageSize: number = 12;
+  categoriaSelecionada = '';
+  page = 1;
+  pageSize = 12;
 
   constructor(
     private dialog: MatDialog,
@@ -93,7 +93,7 @@ export class PedidoVendaComponent implements OnInit{
     }
   }
 
-  onCategoriaChange(event: any){
+  onCategoriaChange(event: any): void{
     this.categoriaSelecionada = event.target.value;
     // console.log(event)
     this.filtrarProdutos();
@@ -131,8 +131,7 @@ export class PedidoVendaComponent implements OnInit{
         produto: this.listaProdutosCarrinho
       };
 
-      this.pedidoService.criarPedido(novoPedido).subscribe((response) => {
-        // console.log('Pedido realizado com sucesso', response)
+      this.pedidoService.criarPedido(novoPedido).subscribe(() => {
         this.mensagemService.openSnackBar('Pedido realizado com sucesso')
       })
     }

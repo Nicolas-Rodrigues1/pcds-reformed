@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Produto } from '../produto';
 import { ProdutoService } from '../produto.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { MensagemService } from 'src/app/core/services/mensagem.service';
   templateUrl: './criar-produto.component.html',
   styleUrls: ['./criar-produto.component.scss']
 })
-export class CriarProdutoComponent implements OnInit{
+export class CriarProdutoComponent{
   
   produto: Produto = {
     categoria: '',
@@ -21,9 +21,6 @@ export class CriarProdutoComponent implements OnInit{
     private router: Router,
     private mensagemService: MensagemService 
   ){}
-
-  ngOnInit() {
-  }
 
   criarProduto(){
     this.produtoService.criar(this.produto).subscribe(() => {

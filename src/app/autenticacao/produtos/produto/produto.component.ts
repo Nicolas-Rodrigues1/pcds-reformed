@@ -15,8 +15,8 @@ import { EditarProdutoComponent } from '../editar-produto/editar-produto.compone
 export class ProdutoComponent implements OnInit{
   listaProdutos: Produto[] = [];
   produtoSelecionado: Produto | null = null;
-  page: number = 1;
-  pageSize: number = 12;
+  page = 1;
+  pageSize = 12;
 
   @Input() title = 'Como gostaria de manejar os produtos?';
   @Input() produto: Produto = {

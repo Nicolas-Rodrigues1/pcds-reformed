@@ -14,8 +14,8 @@ import { EditarClienteComponent } from '../editar-cliente/editar-cliente.compone
 export class ClienteComponent implements OnInit{
   listaClientes: Cliente[] = [];
   clienteSelecionado: Cliente | null = null;
-  page: number = 1;
-  pageSize: number = 8;
+  page = 1;
+  pageSize = 8;
 
   @Input() title = 'Como gostaria de manejar os clientes?'
   @Input() cliente: Cliente = {

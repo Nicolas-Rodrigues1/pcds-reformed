@@ -38,7 +38,7 @@
         <span>Página {{ page }}</span>
         <button (click)="proximaPagina()">Próxima Página</button>
       </div>
-      <div *ngIf="listaProdutosCarrinho.length != 0" class="carrinho">
+      <div *ngIf="listaProdutosCarrinho.length !== 0" class="carrinho">
         <h2>Carrinho</h2>
         <div class="produto-carrinho" *ngFor="let produto of listaProdutosCarrinho">
           <p>Nome: {{ produto.nome }}</p>

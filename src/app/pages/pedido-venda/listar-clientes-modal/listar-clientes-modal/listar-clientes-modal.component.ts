@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/autenticacao/clientes/cliente';
 import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 
@@ -10,9 +10,9 @@ import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 export class ListarClientesModalComponent implements OnInit{
   listaClientes: Cliente[] = [];
   listaClientesFiltrados: Cliente[] = []
-  nomeDigitado: string = '';
-  page: number = 1;
-  pageSize: number = 6;
+  nomeDigitado = '';
+  page = 1;
+  pageSize = 6;
 
   @Input() cliente: Cliente = {
     id: '',

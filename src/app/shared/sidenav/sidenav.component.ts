@@ -8,7 +8,7 @@ import { UserService } from 'src/app/autenticacao/services/user.service';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
-  opened: boolean = false;
+  opened = false;
 
   constructor(
     private userService: UserService,

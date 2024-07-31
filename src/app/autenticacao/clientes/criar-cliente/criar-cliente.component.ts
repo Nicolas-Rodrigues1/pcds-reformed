@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { MensagemService } from 'src/app/core/services/mensagem.service';
   templateUrl: './criar-cliente.component.html',
   styleUrls: ['./criar-cliente.component.scss']
 })
-export class CriarClienteComponent implements OnInit{
+export class CriarClienteComponent{
 
   cliente: Cliente = {
     id: '',
@@ -27,9 +27,6 @@ export class CriarClienteComponent implements OnInit{
     private router: Router,
     private mensagemService: MensagemService
   ){}
-
-  ngOnInit(): void {
-  }
 
   criarCliente(){
     this.clienteService.criar(this.cliente).subscribe(()=>{

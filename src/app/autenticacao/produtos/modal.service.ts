@@ -16,5 +16,4 @@ export class ModalService {
     this.dadosModal.next({id, confirmar});
   }
   
-  constructor() { }
 }

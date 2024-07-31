@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormularioService } from 'src/app/core/services/formulario.service';
@@ -9,7 +9,7 @@ import { FormValidations } from 'src/app/shared/form-validations';
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss']
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit{
   cadastroForm!: FormGroup;
 
   @Input() title = 'Crie seu cadastro';

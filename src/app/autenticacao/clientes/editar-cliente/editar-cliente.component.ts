@@ -1,11 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MensagemService } from 'src/app/core/services/mensagem.service';
 import { ExcluirClienteComponent } from '../excluir-cliente/excluir-cliente.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Produto } from '../../produtos/produto';
 
 @Component({
   selector: 'app-editar-cliente',
@@ -30,9 +27,6 @@ export class EditarClienteComponent{
     @Inject(MAT_DIALOG_DATA) public data: {cliente: Cliente}
   ){
     this.cliente = data.cliente
-  }
-
-  ngOnInit(): void {
   }
 
   editarCliente(){
