@@ -5,6 +5,6 @@ export interface Pedido{
     idPedido: number,
     status: string,
     cliente: Cliente,
-    produto: Produto
+    produto: Produto[]
 }
     

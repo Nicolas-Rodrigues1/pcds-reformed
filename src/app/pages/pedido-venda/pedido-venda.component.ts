@@ -109,12 +109,10 @@ export class PedidoVendaComponent implements OnInit{
   }
 
   adicionarProdutoCarrinho(){
-    console.log(this.produtoSelecionado)
     if(this.produtoSelecionado){
       this.listaProdutosCarrinho.push(this.produtoSelecionado);
       this.mensagemService.openSnackBar('Produto adicionado ao carrinho')
     }
-    console.log(this.listaProdutosCarrinho) 
   }
 
   removerProduto(produto: Produto){
@@ -131,14 +129,15 @@ export class PedidoVendaComponent implements OnInit{
         idPedido: this.idPedido++,
         status: this.status,
         cliente: this.clienteSelecionado,
-        produto: this.produtoSelecionado
+        produto: this.listaProdutosCarrinho
       };
 
       this.pedidoService.criarPedido(novoPedido).subscribe((response) => {
-        console.log('Pedido realizado com sucesso', response)
+        // console.log('Pedido realizado com sucesso', response)
         this.mensagemService.openSnackBar('Pedido realizado com sucesso')
       })
     }
+    this.listaProdutosCarrinho = []
   }
 
 }
