@@ -39,8 +39,4 @@ export class ClienteService {
     return this.http.put<Cliente>(url, cliente)
   }
 
-  buscarPorId(id: number): Observable<Cliente>{
-    const url = `${this.apiUrl}/${id}`
-    return this.http.get<Cliente>(url)
-  }
 }

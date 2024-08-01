@@ -116,7 +116,7 @@
       "nome": "AMD Threadripper"
     },
     {
-      "id":245237,
+      "id": 245237,
       "categoria": "armazenamento",
       "nome": "SSD 500GB"
     },
@@ -394,117 +394,9 @@
   ],
   "pedidos": [
     {
-      "idPedido": 1,
-      "status": "Pendente",
-      "cliente": {
-        "id": 1,
-        "nome": "Pedro",
-        "nascimento": "03/12/2001",
-        "cpf": "12345678912",
-        "cep": "12030240",
-        "email": "pedro@email.com",
-        "telefone": "11934352983",
-        "genero": "masculino"
-      },
-      "produto": [
-        {
-          "id": 6393,
-          "categoria": "placaMae",
-          "nome": "Asus"
-        },
-        {
-          "id": 429,
-          "categoria": "placaMae",
-          "nome": "Gigabyte"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "idPedido": 1,
-      "status": "Pendente",
-      "cliente": {
-        "id": 3,
-        "nome": "João",
-        "nascimento": "22/09/1990",
-        "cpf": "11223344556",
-        "cep": "22040050",
-        "email": "joao@email.com",
-        "telefone": "1198765432",
-        "genero": "masculino"
-      },
-      "produto": [
-        {
-          "id": 6393,
-          "categoria": "placaMae",
-          "nome": "Asus"
-        },
-        {
-          "id": 67,
-          "categoria": "placaMae",
-          "nome": "MSI"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "idPedido": 1,
-      "status": "Pendente",
-      "cliente": {
-        "id": 3,
-        "nome": "João",
-        "nascimento": "22/09/1990",
-        "cpf": "11223344556",
-        "cep": "22040050",
-        "email": "joao@email.com",
-        "telefone": "1198765432",
-        "genero": "masculino"
-      },
-      "produto": [
-        {
-          "id": 6393,
-          "categoria": "placaMae",
-          "nome": "Asus"
-        },
-        {
-          "id": 78,
-          "categoria": "processador",
-          "nome": "Intel i5"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "idPedido": 1,
-      "status": "Pendente",
-      "cliente": {
-        "id": 1,
-        "nome": "Pedro",
-        "nascimento": "03/12/2001",
-        "cpf": "12345678912",
-        "cep": "12030240",
-        "email": "pedro@email.com",
-        "telefone": "11934352983",
-        "genero": "masculino"
-      },
-      "produto": [
-        {
-          "id": 6393,
-          "categoria": "placaMae",
-          "nome": "Gigabyte"
-        },
-        {
-          "id": 4329,
-          "categoria": "placaMae",
-          "nome": "Gigabyte"
-        }
-      ],
-      "id": 4
-    },
-    {
       "idPedido": 13213,
       "status": "Pendente",
-      "cliente": "1",
+      "cliente": 1,
       "produto": [
         6393
       ],
@@ -513,7 +405,7 @@
     {
       "idPedido": 15435,
       "status": "Pendente",
-      "cliente": "1",
+      "cliente": 1,
       "produto": [
         429
       ],
@@ -522,21 +414,30 @@
     {
       "idPedido": 23123,
       "status": "Pendente",
-      "cliente": "1",
+      "cliente": 1,
       "produto": [
-        429,
-        90
+        5654678,
+        5871171
       ],
       "id": 7
     },
     {
       "idPedido": 141232,
       "status": "Pendente",
-      "cliente": "3",
+      "cliente": 3,
       "produto": [
         5654678
       ],
       "id": 8
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": 5,
+      "produto": [
+        5654678
+      ],
+      "id": 9
     }
   ]
 }

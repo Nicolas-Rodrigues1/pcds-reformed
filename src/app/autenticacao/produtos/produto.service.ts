@@ -11,6 +11,10 @@ export class ProdutoService {
 
   constructor(private http: HttpClient) { }
 
+  getProdutos(): Observable<Produto[]>{
+    return this.http.get<Produto[]>(this.apiUrl);
+  }
+
   listar(page: number, pageSize: number): Observable<Produto[]> {
     const params = new HttpParams()
       .set('_page', page.toString())
@@ -32,11 +36,5 @@ export class ProdutoService {
     const url = `${this.apiUrl}/${produto.id}`
     return this.http.put<Produto>(url, produto)
   }
-
-  buscarPorId(id: number): Observable<Produto>{
-    const url = `${this.apiUrl}/${id}`
-    return this.http.get<Produto>(url)
-  }
-
   
 }
