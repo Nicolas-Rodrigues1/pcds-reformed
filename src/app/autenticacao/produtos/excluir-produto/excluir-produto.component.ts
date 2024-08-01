@@ -11,7 +11,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class ExcluirProdutoComponent{
 
   produto: Produto = {
-    id: '',
+    id: 0,
     nome: '',
     categoria: ''
   }
@@ -25,7 +25,7 @@ export class ExcluirProdutoComponent{
   }
 
   excluirProduto(){
-    this.produtoService.excluir(this.produto.id!).subscribe(() => {
+    this.produtoService.excluir(this.produto.id).subscribe(() => {
       this.dialogRef.close('excluido')
     })
   }

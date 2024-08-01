@@ -1,171 +1,206 @@
 {
   "produtos": [
     {
-      "id": "6393",
+      "id": 5654678,
       "categoria": "placaMae",
       "nome": "Gigabyte"
     },
     {
-      "id": "42f9",
+      "id": 8797825,
       "categoria": "placaMae",
       "nome": "Gigabyte"
     },
     {
-      "id": "04c8",
+      "id": 786815,
       "categoria": "armazenamento",
       "nome": "HD 500gb"
     },
     {
-      "id": "1a2b",
+      "id": 41756,
       "categoria": "processador",
       "nome": "AMD Ryzen"
     },
     {
-      "id": "2b3c",
+      "id": 5464521,
       "categoria": "memoriaRam",
       "nome": "Corsair 16GB"
     },
     {
-      "id": "3c4d",
+      "id": 455678,
       "categoria": "monitor",
       "nome": "Dell 24\""
     },
     {
-      "id": "4d5e",
+      "id": 89784,
       "categoria": "mouse",
       "nome": "Logitech"
     },
     {
-      "id": "6f7g",
+      "id": 546452,
       "categoria": "placaMae",
       "nome": "MSI"
     },
     {
-      "id": "7g8h",
+      "id": 645645,
       "categoria": "processador",
       "nome": "Intel i5"
     },
     {
-      "id": "8h9i",
+      "id": 876544,
       "categoria": "armazenamento",
       "nome": "SSD 1TB"
     },
     {
-      "id": "9i0j",
+      "id": 675244,
       "categoria": "memoriaRam",
       "nome": "Kingston 8GB"
     },
     {
-      "id": "0j1k",
+      "id": 546875,
       "categoria": "monitor",
       "nome": "Samsung 27\""
     },
     {
-      "id": "1k2l",
+      "id": 578645,
       "categoria": "mouse",
       "nome": "Microsoft"
     },
     {
-      "id": "2l3m",
+      "id": 764445,
       "categoria": "teclado",
       "nome": "Logitech"
     },
     {
-      "id": "3m4n",
+      "id": 2872547,
       "categoria": "placaMae",
       "nome": "ASRock"
     },
     {
-      "id": "4n5o",
+      "id": 278678,
       "categoria": "processador",
       "nome": "Intel i7"
     },
     {
-      "id": "5o6p",
+      "id": 287678,
       "categoria": "armazenamento",
       "nome": "HD 1TB"
     },
     {
-      "id": "6p7q",
+      "id": 39747,
       "categoria": "memoriaRam",
       "nome": "G.Skill 32GB"
     },
     {
-      "id": "7q8r",
+      "id": 578575,
       "categoria": "monitor",
       "nome": "LG 34\""
     },
     {
-      "id": "8r9s",
+      "id": 21785,
       "categoria": "mouse",
       "nome": "Razer"
     },
     {
-      "id": "9s0t",
+      "id": 278678,
       "categoria": "teclado",
       "nome": "Corsair"
     },
     {
-      "id": "0t1u",
+      "id": 87614,
       "categoria": "placaMae",
       "nome": "Biostar"
     },
     {
-      "id": "1u2v",
+      "id": 855572,
       "categoria": "processador",
       "nome": "AMD Threadripper"
     },
     {
-      "id": "2v3w",
+      "id":245237,
       "categoria": "armazenamento",
       "nome": "SSD 500GB"
     },
     {
-      "id": "3w4x",
+      "id": 87244,
       "categoria": "memoriaRam",
       "nome": "Patriot 16GB"
     },
     {
-      "id": "4x5y",
+      "id": 893974,
       "categoria": "monitor",
       "nome": "Acer 32\""
     },
     {
-      "id": "5y6z",
+      "id": 872855,
       "categoria": "mouse",
       "nome": "SteelSeries"
     },
     {
-      "id": "6z7a",
+      "id": 5871171,
       "categoria": "teclado",
       "nome": "Cooler Master"
+    },
+    {
+      "id": 2542542,
+      "categoria": "processador",
+      "nome": "teste"
+    },
+    {
+      "id": 98651,
+      "categoria": "placaMae",
+      "nome": "teste2"
+    },
+    {
+      "id": 3583179219,
+      "categoria": "",
+      "nome": "teste3"
+    },
+    {
+      "id": 827069304,
+      "categoria": "placaMae",
+      "nome": "Teste4"
     }
   ],
   "login": [
     {
       "email": "nicolas@email.com",
       "senha": "1234",
-      "id": "6a69"
+      "id": 669
     },
     {
       "email": "ana@email.com",
       "senha": "password1",
-      "id": "9811"
+      "id": 9811
     },
     {
       "email": "maria@email.com",
       "senha": "abc123",
-      "id": "be7c"
+      "id": 68465
     },
     {
       "email": "joao@email.com",
       "senha": "mypassword",
-      "id": "241d"
+      "id": 241
     },
     {
       "email": "carla@email.com",
       "senha": "senhaSegura",
-      "id": "976d"
+      "id": 61321
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 16847
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 32518
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 681232
     }
   ],
   "cadastros": [
@@ -180,7 +215,7 @@
       "confirmarEmail": "nicolas@email.com",
       "senha": "1234",
       "confirmarSenha": "1234",
-      "id": "eafe"
+      "id": 65139
     },
     {
       "nome": "mariana",
@@ -193,7 +228,7 @@
       "confirmarEmail": "mariana@email.com",
       "senha": "abcd",
       "confirmarSenha": "abcd",
-      "id": "2794"
+      "id": 2794
     },
     {
       "nome": "joao",
@@ -206,7 +241,7 @@
       "confirmarEmail": "joao@email.com",
       "senha": "efgh",
       "confirmarSenha": "efgh",
-      "id": "5bf9"
+      "id": 359
     },
     {
       "nome": "carla",
@@ -219,7 +254,7 @@
       "confirmarEmail": "carla@email.com",
       "senha": "ijkl",
       "confirmarSenha": "ijkl",
-      "id": "1cfc"
+      "id": 1321
     },
     {
       "nome": "pedro",
@@ -232,12 +267,12 @@
       "confirmarEmail": "pedro@email.com",
       "senha": "mnop",
       "confirmarSenha": "mnop",
-      "id": "8f13"
+      "id": 813
     }
   ],
   "clientes": [
     {
-      "id": "1",
+      "id": 1,
       "nome": "Pedro",
       "nascimento": "03/12/2001",
       "cpf": "12345678912",
@@ -247,7 +282,7 @@
       "genero": "masculino"
     },
     {
-      "id": "2",
+      "id": 2,
       "nome": "Maria",
       "nascimento": "15/06/1985",
       "cpf": "98765432100",
@@ -257,7 +292,7 @@
       "genero": "feminino"
     },
     {
-      "id": "3",
+      "id": 3,
       "nome": "João",
       "nascimento": "22/09/1990",
       "cpf": "11223344556",
@@ -267,7 +302,7 @@
       "genero": "masculino"
     },
     {
-      "id": "4",
+      "id": 4,
       "nome": "Ana",
       "nascimento": "05/02/1995",
       "cpf": "55667788999",
@@ -277,7 +312,7 @@
       "genero": "feminino"
     },
     {
-      "id": "5",
+      "id": 5,
       "nome": "Roberto",
       "nascimento": "15/02/1982",
       "cpf": "12345678901",
@@ -287,7 +322,7 @@
       "genero": "masculino"
     },
     {
-      "id": "6",
+      "id": 6,
       "nome": "Cláudia",
       "nascimento": "22/03/1990",
       "cpf": "23456789012",
@@ -297,7 +332,7 @@
       "genero": "feminino"
     },
     {
-      "id": "8",
+      "id": 8,
       "nome": "Sofia",
       "nascimento": "29/09/1994",
       "cpf": "45678901234",
@@ -307,7 +342,7 @@
       "genero": "feminino"
     },
     {
-      "id": "9",
+      "id": 9,
       "nome": "Miguel",
       "nascimento": "11/11/1980",
       "cpf": "56789012345",
@@ -317,7 +352,7 @@
       "genero": "masculino"
     },
     {
-      "id": "10",
+      "id": 10,
       "nome": "Luana",
       "nascimento": "16/12/1992",
       "cpf": "67890123456",
@@ -327,7 +362,7 @@
       "genero": "feminino"
     },
     {
-      "id": "11",
+      "id": 11,
       "nome": "André",
       "nascimento": "20/05/1985",
       "cpf": "78901234567",
@@ -337,7 +372,7 @@
       "genero": "masculino"
     },
     {
-      "id": "12",
+      "id": 12,
       "nome": "Tatiane",
       "nascimento": "05/09/1989",
       "cpf": "89012345678",
@@ -347,7 +382,7 @@
       "genero": "feminino"
     },
     {
-      "id": "13",
+      "id": 13,
       "nome": "Paulo",
       "nascimento": "26/06/1991",
       "cpf": "90123456789",
@@ -355,16 +390,6 @@
       "email": "paulo@email.com",
       "telefone": "9190123456",
       "genero": "masculino"
-    },
-    {
-      "id": "14",
-      "nome": "Isabela",
-      "nascimento": "03/04/1993",
-      "cpf": "01234567890",
-      "cep": "20000010",
-      "email": "isabela@email.com",
-      "telefone": "0201234567",
-      "genero": "feminino"
     }
   ],
   "pedidos": [
@@ -372,7 +397,7 @@
       "idPedido": 1,
       "status": "Pendente",
       "cliente": {
-        "id": "1",
+        "id": 1,
         "nome": "Pedro",
         "nascimento": "03/12/2001",
         "cpf": "12345678912",
@@ -383,12 +408,12 @@
       },
       "produto": [
         {
-          "id": "6393",
+          "id": 6393,
           "categoria": "placaMae",
           "nome": "Asus"
         },
         {
-          "id": "42f9",
+          "id": 429,
           "categoria": "placaMae",
           "nome": "Gigabyte"
         }
@@ -399,7 +424,7 @@
       "idPedido": 1,
       "status": "Pendente",
       "cliente": {
-        "id": "3",
+        "id": 3,
         "nome": "João",
         "nascimento": "22/09/1990",
         "cpf": "11223344556",
@@ -410,12 +435,12 @@
       },
       "produto": [
         {
-          "id": "6393",
+          "id": 6393,
           "categoria": "placaMae",
           "nome": "Asus"
         },
         {
-          "id": "6f7g",
+          "id": 67,
           "categoria": "placaMae",
           "nome": "MSI"
         }
@@ -426,7 +451,7 @@
       "idPedido": 1,
       "status": "Pendente",
       "cliente": {
-        "id": "3",
+        "id": 3,
         "nome": "João",
         "nascimento": "22/09/1990",
         "cpf": "11223344556",
@@ -437,17 +462,81 @@
       },
       "produto": [
         {
-          "id": "6393",
+          "id": 6393,
           "categoria": "placaMae",
           "nome": "Asus"
         },
         {
-          "id": "7g8h",
+          "id": 78,
           "categoria": "processador",
           "nome": "Intel i5"
         }
       ],
       "id": 3
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": {
+        "id": 1,
+        "nome": "Pedro",
+        "nascimento": "03/12/2001",
+        "cpf": "12345678912",
+        "cep": "12030240",
+        "email": "pedro@email.com",
+        "telefone": "11934352983",
+        "genero": "masculino"
+      },
+      "produto": [
+        {
+          "id": 6393,
+          "categoria": "placaMae",
+          "nome": "Gigabyte"
+        },
+        {
+          "id": 4329,
+          "categoria": "placaMae",
+          "nome": "Gigabyte"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "idPedido": 13213,
+      "status": "Pendente",
+      "cliente": "1",
+      "produto": [
+        6393
+      ],
+      "id": 5
+    },
+    {
+      "idPedido": 15435,
+      "status": "Pendente",
+      "cliente": "1",
+      "produto": [
+        429
+      ],
+      "id": 6
+    },
+    {
+      "idPedido": 23123,
+      "status": "Pendente",
+      "cliente": "1",
+      "produto": [
+        429,
+        90
+      ],
+      "id": 7
+    },
+    {
+      "idPedido": 141232,
+      "status": "Pendente",
+      "cliente": "3",
+      "produto": [
+        3583179219
+      ],
+      "id": 8
     }
   ]
 }

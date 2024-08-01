@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, OnInit } from '@angular/core';
 import { ListarClientesModalComponent } from './listar-clientes-modal/listar-clientes-modal/listar-clientes-modal.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,7 +22,8 @@ export class PedidoVendaComponent implements OnInit{
   status = 'Pendente';
   idPedido = 1;
 
-  listaProdutosCarrinho: Produto[] = []
+  listaProdutosCarrinho: number[] = []
+  listaProdutosCarrinhoShow: Produto[] = []
   listaProdutos: Produto[] = [];
   listaPedidos: Pedido[] = []
   produtosFiltrados: Produto[] = [];
@@ -109,13 +111,16 @@ export class PedidoVendaComponent implements OnInit{
 
   adicionarProdutoCarrinho(){
     if(this.produtoSelecionado){
-      this.listaProdutosCarrinho.push(this.produtoSelecionado);
+      this.listaProdutosCarrinho.push(this.produtoSelecionado.id);
+      this.listaProdutosCarrinhoShow.push(this.produtoSelecionado);
+      console.log(this.listaProdutosCarrinho)
+      console.log(this.listaProdutosCarrinhoShow)
       this.mensagemService.openSnackBar('Produto adicionado ao carrinho')
     }
   }
 
   removerProduto(produto: Produto){
-    const index = this.listaProdutosCarrinho.findIndex(p => p.id === produto.id)
+    const index = this.listaProdutosCarrinhoShow.findIndex(p => p.id === produto.id)
     this.listaProdutosCarrinho.splice(index, 1)
   }
 
@@ -127,7 +132,7 @@ export class PedidoVendaComponent implements OnInit{
       const novoPedido: Pedido = {
         idPedido: this.idPedido++,
         status: this.status,
-        cliente: this.clienteSelecionado,
+        cliente: this.clienteSelecionado.id,
         produto: this.listaProdutosCarrinho
       };
 
@@ -136,6 +141,7 @@ export class PedidoVendaComponent implements OnInit{
       })
     }
     this.listaProdutosCarrinho = []
+    this.listaProdutosCarrinhoShow = []
   }
 
 }

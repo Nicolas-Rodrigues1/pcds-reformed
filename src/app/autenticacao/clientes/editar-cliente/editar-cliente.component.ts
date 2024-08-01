@@ -11,7 +11,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class EditarClienteComponent{
   cliente: Cliente = {
-    id: '',
+    id: 0,
     nome: '',
     nascimento: '',
     cpf: '',

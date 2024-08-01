@@ -19,7 +19,7 @@ export class ClienteComponent implements OnInit{
 
   @Input() title = 'Como gostaria de manejar os clientes?'
   @Input() cliente: Cliente = {
-    id: '',
+    id: 0,
     nome: 'teste',
     nascimento: '',
     cpf: '',

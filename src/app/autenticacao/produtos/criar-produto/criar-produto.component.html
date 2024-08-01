@@ -18,7 +18,7 @@
                 <option value="teclado">Teclado</option>
             </select>
             <div>
-                <button class="save-button" (click)="criarProduto()">Salvar</button>
+                <button class="save-button" [disabled]="produto.categoria === ''" (click)="criarProduto()">Salvar</button>
                 <button class="cancel-button" (click)="cancelar()">Cancelar</button>
             </div>
         </form>

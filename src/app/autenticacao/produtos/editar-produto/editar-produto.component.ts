@@ -12,7 +12,7 @@ import { ExcluirProdutoComponent } from '../excluir-produto/excluir-produto.comp
 export class EditarProdutoComponent{
   
   produto: Produto = {
-    id: '',
+    id: 0,
     categoria: '',
     nome: ''
   }

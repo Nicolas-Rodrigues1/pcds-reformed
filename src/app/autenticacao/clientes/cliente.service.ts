@@ -29,7 +29,7 @@ export class ClienteService {
     return this.http.post<Cliente>(this.apiUrl, cliente)
   }
 
-  excluir(id: string): Observable<Cliente>{
+  excluir(id: number): Observable<Cliente>{
     const url = `${this.apiUrl}/${id}`
     return this.http.delete<Cliente>(url)
   }
@@ -39,7 +39,7 @@ export class ClienteService {
     return this.http.put<Cliente>(url, cliente)
   }
 
-  buscarPorId(id: string): Observable<Cliente>{
+  buscarPorId(id: number): Observable<Cliente>{
     const url = `${this.apiUrl}/${id}`
     return this.http.get<Cliente>(url)
   }

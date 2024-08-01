@@ -9,9 +9,10 @@ import { MensagemService } from 'src/app/core/services/mensagem.service';
   templateUrl: './criar-produto.component.html',
   styleUrls: ['./criar-produto.component.scss']
 })
-export class CriarProdutoComponent{
+export class CriarProdutoComponent {
   
   produto: Produto = {
+    id: 0,
     categoria: '',
     nome: '',
   }
@@ -20,18 +21,26 @@ export class CriarProdutoComponent{
     private produtoService: ProdutoService,
     private router: Router,
     private mensagemService: MensagemService 
-  ){}
+  ) {
+    this.gerarId();
+  }
 
-  criarProduto(){
+  criarProduto() {
     this.produtoService.criar(this.produto).subscribe(() => {
-      this.router.navigate(['/auth/produtos'])
-    })
-    console.log(this.produto)
-    const mensagemProdutoCriado = 'Produto criado com sucesso!'
-    this.mensagemService.openSnackBar(mensagemProdutoCriado)
+      this.router.navigate(['/auth/produtos']);
+    });
+    console.log(this.produto);
+    const mensagemProdutoCriado = 'Produto criado com sucesso!';
+    this.mensagemService.openSnackBar(mensagemProdutoCriado);
   }
 
   cancelar() {
-    this.router.navigate(['/auth/produtos'])
+    this.router.navigate(['/auth/produtos']);
+  }
+
+  gerarId(): void {
+    if (this.produto.id === 0) {
+      this.produto.id = Math.floor(Math.random() * 1000000000);
+    }
   }
 }

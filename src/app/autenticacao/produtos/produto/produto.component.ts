@@ -20,7 +20,7 @@ export class ProdutoComponent implements OnInit{
 
   @Input() title = 'Como gostaria de manejar os produtos?';
   @Input() produto: Produto = {
-    id: '',
+    id: 0,
     categoria: '',
     nome: ''
   }

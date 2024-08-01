@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, Input, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/autenticacao/clientes/cliente';
 import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
@@ -15,7 +16,7 @@ export class ListarClientesModalComponent implements OnInit{
   pageSize = 6;
 
   @Input() cliente: Cliente = {
-    id: '',
+    id: 0,
     nome: 'teste',
     nascimento: '',
     cpf: '',

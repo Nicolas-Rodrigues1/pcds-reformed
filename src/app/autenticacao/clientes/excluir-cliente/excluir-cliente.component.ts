@@ -10,7 +10,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class ExcluirClienteComponent{
   cliente: Cliente = {
-    id: '',
+    id: 0,
     nome: '',
     nascimento: '',
     cpf: '',

@@ -12,7 +12,7 @@ import { MensagemService } from 'src/app/core/services/mensagem.service';
 export class CriarClienteComponent{
 
   cliente: Cliente = {
-    id: '',
+    id: 0,
     nome: '',
     nascimento: '',
     cpf: '',
@@ -26,7 +26,9 @@ export class CriarClienteComponent{
     private clienteService: ClienteService,
     private router: Router,
     private mensagemService: MensagemService
-  ){}
+  ){
+    this.gerarId();
+  }
 
   criarCliente(){
     this.clienteService.criar(this.cliente).subscribe(()=>{
@@ -38,5 +40,11 @@ export class CriarClienteComponent{
 
   cancelar(){
     this.router.navigate(['/auth/clientes'])
+  }
+
+  gerarId(): void {
+    if (this.cliente.id === 0) {
+      this.cliente.id = Math.floor(Math.random() * 1000000000);
+    }
   }
 }
