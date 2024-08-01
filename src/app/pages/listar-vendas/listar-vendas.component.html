@@ -1,0 +1,19 @@
+<app-sidenav>
+</app-sidenav>
+<app-container>
+    <mat-card>
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-content>
+            <div class="grid-container">
+                <div *ngFor="let pedido of listaPedidos" class="grid-item">
+                    <p>Status: {{pedido.status}}</p>
+                    <p>Cliente: {{pedido.cliente}}</p>
+                    <p>Produtos:</p>
+                    <ul>
+                        <li *ngFor="let produto of pedido.produto"></li>
+                    </ul>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</app-container>

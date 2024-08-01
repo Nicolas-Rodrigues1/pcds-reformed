@@ -7,12 +7,14 @@ import { MaterialModule } from "../core/material/material.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { ListarClientesModalComponent } from './pedido-venda/listar-clientes-modal/listar-clientes-modal/listar-clientes-modal.component';
 import { ConfirmarPedidoModalComponent } from './pedido-venda/confirmar-pedido-modal/confirmar-pedido-modal.component';
+import { ListarVendasComponent } from './listar-vendas/listar-vendas.component';
 
 @NgModule({
     declarations:[
         PedidoVendaComponent,
         ListarClientesModalComponent,
-        ConfirmarPedidoModalComponent
+        ConfirmarPedidoModalComponent,
+        ListarVendasComponent
     ],
     imports:[
         CommonModule,
