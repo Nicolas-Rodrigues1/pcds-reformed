@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from '../services/autenticacao.service';
+import { EmailService } from 'src/app/core/services/email.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit{
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private authService: AutenticacaoService
+    private authService: AutenticacaoService,
+    private emailService: EmailService
   ){}
 
   ngOnInit() {
@@ -39,6 +41,7 @@ export class LoginComponent implements OnInit{
           console.log('Problema', err)
         }
       })
+      this.emailService.setEmail(email);
 
     }
   }

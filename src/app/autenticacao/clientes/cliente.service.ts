@@ -1,13 +1,17 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Cliente } from './cliente';
+import { BehaviorSubject, map, Observable } from 'rxjs';
+import { Cliente, Clientelogin } from './cliente';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
-  private apiUrl = 'http://localhost:3000/clientes'
+  private apiUrl = 'http://localhost:3000/clientes';
+  private apiUrlEmail = 'http://localhost:3000'
+  private apiUrlLogin: string = environment.apiUrl;
   private clienteSelecionadoSubject = new BehaviorSubject<Cliente | null>(null);
   clienteSelecionado$ = this.clienteSelecionadoSubject.asObservable();
 
@@ -38,5 +42,18 @@ export class ClienteService {
     const url = `${this.apiUrl}/${cliente.id}`
     return this.http.put<Cliente>(url, cliente)
   }
+
+  criarLogin(email: string, senha: string): Observable<Clientelogin>{
+    const params = {email, senha}
+    return this.http.post<Clientelogin>(`${this.apiUrlLogin}/login`, params)
+  }
+
+
+  getClientePorEmail(email: string): Observable<Cliente> {
+    return this.http.get<Cliente[]>(`${this.apiUrlEmail}/clientes?email=${email}`).pipe(
+      map(clientes => clientes[0])
+    );
+}
+
 
 }

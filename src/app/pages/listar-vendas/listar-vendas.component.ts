@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, Input, OnInit } from '@angular/core';
@@ -5,6 +6,8 @@ import { Pedido } from '../pedido-venda/pedido';
 import { PedidoService } from '../pedido-venda/pedido.service';
 import { Produto } from 'src/app/autenticacao/produtos/produto';
 import { ProdutoService } from 'src/app/autenticacao/produtos/produto.service';
+import { EmailService } from 'src/app/core/services/email.service';
+import { ClienteService } from 'src/app/autenticacao/clientes/cliente.service';
 
 @Component({
   selector: 'app-listar-vendas',
@@ -14,6 +17,8 @@ import { ProdutoService } from 'src/app/autenticacao/produtos/produto.service';
 export class ListarVendasComponent implements OnInit{
   listaPedidos: Pedido[] = []
   produtos: Produto[] = []
+  emailLogado: string | null = null;
+  nomeCliente = '';
 
   @Input() title = 'Essas são seus pedidos'
   @Input() pedido: Pedido = {
@@ -31,13 +36,22 @@ export class ListarVendasComponent implements OnInit{
 
   constructor(
     private pedidoService: PedidoService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private emailService: EmailService,
+    private clienteService: ClienteService
   ){}
   
   ngOnInit(): void {
-    this.pedidoService.listarPedidos().subscribe((listaPedidos) => {
-      this.listaPedidos = listaPedidos
+    this.emailService.email$.subscribe(email => {
+      this.emailLogado = email;
+      
+      this.clienteService.getClientePorEmail(this.emailLogado!).subscribe(cliente => {
+        this.pedidoService.listarPedidos().subscribe((listaPedidos)=> {
+          this.listaPedidos = listaPedidos.filter(pedido => pedido.cliente === cliente.id)
+        })
+      })
     })
+    // console.log(this.emailLogado)
 
     this.produtoService.getProdutos().subscribe((produtos) => {
       this.produtos = produtos

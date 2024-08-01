@@ -8,3 +8,9 @@ export interface Cliente{
     email: string;
     genero: string;
 }
+
+export interface Clientelogin{
+    id: number;
+    email: string;
+    senha: string;
+}
