@@ -1,0 +1,31 @@
+<app-sidenav>
+</app-sidenav>
+<app-container>
+    <mat-card>
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-content>
+            <div class="grid-container">
+                <div *ngFor="let produto of listaProdutos" class="grid-item">
+                    <p>Nome: {{ produto.nome }}</p>
+                    <p>Categoria: {{ produto.categoria }}</p>
+                    <div>
+                        <button mat-icon-button (click)="selecionarProduto(produto)" (click)="openExcluir()">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="selecionarProduto(produto)" (click)="openEditar()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="paginacao">
+                    <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+                    <span>Página {{ page }}</span>
+                    <button (click)="proximaPagina()">Próxima Página</button>
+                </div>
+            </div>
+        </mat-card-content>
+        <div class="buttonAdicionar">
+            <button mat-stroked-button routerLink="/auth/criarProduto">Adicionar Produto</button>
+        </div>
+    </mat-card>
+</app-container>

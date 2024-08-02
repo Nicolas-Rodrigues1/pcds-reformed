@@ -1,0 +1,36 @@
+<app-sidenav>
+</app-sidenav>
+<app-container>
+    <mat-card>
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-content>
+            <div class="grid-container">
+                <div *ngFor="let cliente of listaClientes" class="grid-item">
+                    <p>Nome: {{ cliente.nome }}</p>
+                    <p>Email: {{ cliente.email }}</p>
+                    <p>CPF: {{ cliente.cpf }}</p>
+                    <p>CEP: {{ cliente.cep }}</p>
+                    <p>Telefone: {{ cliente.telefone }}</p>
+                    <p>Genero: {{ cliente.genero }}</p>
+                    <p>Data de nascimento: {{ cliente.nascimento }}</p>
+                    <div>
+                        <button mat-icon-button (click)="selecionarCliente(cliente)" (click)="openExcluir()">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="selecionarCliente(cliente)" (click)="openEditar()">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="paginacao">
+                    <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+                    <span>Página {{ page }}</span>
+                    <button (click)="proximaPagina()">Próxima Página</button>
+                </div>
+            </div>
+        </mat-card-content>
+        <div class="buttonAdicionar">
+            <button mat-stroked-button routerLink="/auth/criarCliente">Adicionar cliente</button>
+        </div>
+    </mat-card>
+</app-container>

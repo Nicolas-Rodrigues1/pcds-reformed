@@ -1,0 +1,27 @@
+<!-- eslint-disable @angular-eslint/template/label-has-associated-control -->
+<app-container>
+    <mat-card>
+        <mat-card-content>
+            <div class="grid-container">
+                <form>
+                    <label>Digite o nome do cliente:</label>
+                    <input type="search" id="nomeDigitado" (input)="onSearchChange($event)">
+                </form>
+            </div>
+            <div class="grid-container">
+                <div *ngFor="let cliente of listaClientesFiltrados" class="grid-item">
+                    <p>Nome: {{ cliente.nome }}</p>
+                    <p>Email: {{ cliente.email }}</p>
+                    <p>CPF: {{ cliente.cpf }}</p>
+                    <p>Telefone: {{ cliente.telefone }}</p>
+                    <button (click)="selecionarCliente(cliente)" mat-dialog-close><mat-icon>check_circle</mat-icon></button>
+                </div>
+            </div>
+            <div class="paginacao">
+                <button (click)="paginaAnterior()" [disabled]="page === 1">Página Anterior</button>
+                <span>Página {{ page }}</span>
+                <button (click)="proximaPagina()">Próxima Página</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</app-container>

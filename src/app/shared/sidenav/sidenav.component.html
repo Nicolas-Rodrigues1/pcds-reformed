@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+        <div class="grid-container">
+            <button mat-stroked-button (click)="logout()" color="primary">
+                <mat-icon>logout</mat-icon>
+                DESLOGAR
+            </button>
+        </div>
+        <div class="grid-container">
+            <p>Cadastros</p>
+            <ul class="lista-links">
+                <li><a routerLink="/auth/clientes"><u>Clientes</u></a></li>
+                <li><a routerLink="/auth/produtos"><u>Produtos</u></a></li>
+            </ul>
+            <p>Pedido de venda</p>
+            <ul class="lista-links">
+                <li><a routerLink="/auth/pedidos-venda"><u> Realizar pedido</u></a></li>
+                <li><a routerLink="/auth/listar-vendas"><u> Meus pedidos</u></a></li>
+            </ul>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p><button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,73 @@
+app-container {
+    width: 70%;
+    margin: 32px auto 48px; // Adiciona espaçamento superior e inferior e centraliza horizontalmente
+  
+    mat-card {
+      padding: 24px; // Adiciona padding ao cartão para criar espaçamento interno
+      background-color: #555555; // Cor de fundo do cartão
+      border-radius: 8px; // Bordas arredondadas para o cartão
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Adiciona uma sombra sutil ao cartão
+  
+      form {
+        display: flex;
+        flex-direction: column; // Alinha os elementos verticalmente
+        gap: 16px; // Espaçamento entre os campos do formulário
+
+        p {
+          margin: 1px 0 1px; // Remove a margem superior e adiciona margem inferior para espaço entre o texto e o input
+          font-size: 16px; // Tamanho da fonte
+          color: #ffffff; // Cor do texto
+        }
+
+        label {
+          color: #ffffff;
+        }
+
+  
+        .input {
+          width: 100%; // Garante que o campo ocupe toda a largura disponível
+          padding: 8px 12px; // Espaçamento interno para o campo
+          border: 1px solid #ccc; // Borda do campo
+          border-radius: 4px; // Bordas arredondadas para o campo
+          font-size: 16px; // Tamanho da fonte
+          line-height: 1.5; // Altura da linha para melhor legibilidade
+          box-sizing: border-box; // Inclui padding e borda no cálculo da largura
+          margin-top: 1px;
+  
+          &:focus {
+            border-color: #007bff; // Cor da borda ao focar no campo
+            outline: none; // Remove o contorno padrão do navegador
+          }
+        }
+  
+        button {
+          padding: 10px 16px; // Espaçamento interno dos botões
+          border: none; // Remove bordas padrão dos botões
+          border-radius: 4px; // Bordas arredondadas para os botões
+          font-size: 16px; // Tamanho da fonte dos botões
+          cursor: pointer; // Cursor de mão ao passar o mouse sobre o botão
+          transition: background-color 0.3s; // Transição suave para a cor de fundo
+          margin: 2px;
+  
+          &.save-button {
+            background-color: #28a745; // Cor de fundo para o botão Salvar
+            color: white; // Cor do texto para o botão Salvar
+  
+            &:hover {
+              background-color: #218838; // Cor de fundo ao passar o mouse
+            }
+          }
+  
+          &.cancel-button {
+            background-color: #dc3545; // Cor de fundo para o botão Cancelar
+            color: white; // Cor do texto para o botão Cancelar
+  
+            &:hover {
+              background-color: #c82333; // Cor de fundo ao passar o mouse
+            }
+          }
+        }
+      }
+    }
+  }
+  

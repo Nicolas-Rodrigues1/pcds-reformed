@@ -1,0 +1,126 @@
+app-container {
+    width: 70%;
+    margin: 32px auto 48px;   
+  
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 16px; 
+      margin-bottom: 32px; 
+  
+      .grid-item {
+        display: flex;
+        flex-direction: column;
+        padding: 16px; 
+        border: 1px solid #ddd; 
+        border-radius: 8px; 
+        background-color: #555555;
+
+        p{
+          color: white;
+        }
+  
+        mat-form-field {
+          width: 100%;
+        }
+  
+        .radio-group {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 18px;
+        }
+  
+        .drop-container {
+          margin-bottom: 16px;
+  
+          .custom-error {
+            font-size: 12px;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+  
+    .buttonAdicionar {
+      display: flex;
+      justify-content: center; 
+      margin-top: 20px; 
+      margin-bottom: 20px;
+    }
+  
+    mat-card-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 400;
+      margin-bottom: 32px;
+      margin-top: 40px;
+      color: white;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+  
+    mat-card-actions {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+  
+      button {
+        margin: 0 8px;
+      }
+    }
+  
+    mat-divider {
+      margin: 0 16px;
+      border-top-color: #79747E;
+      margin-top: 24px;
+    }
+  
+    h2 {
+      font-weight: 400;
+      font-size: 22px;
+      color: white;
+      margin-left: 16px;
+    }
+  
+    .btn-editar {
+      background: #E6E0E9;
+    }
+  
+    button {
+      img {
+        vertical-align: middle;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr; 
+      }
+    }
+
+    .paginacao {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+    
+      button {
+        margin: 0 8px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    
+      span {
+        margin: 0 8px;
+      }
+    }
+  }
+  

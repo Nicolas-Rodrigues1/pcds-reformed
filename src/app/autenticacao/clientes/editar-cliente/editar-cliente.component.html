@@ -1,0 +1,36 @@
+<app-container>
+    <mat-card>
+        <form>
+            <label for="nome">Altere os dados que deseja</label>
+            <p>Nome</p>
+            <input type="textarea" class="input" id="nome" name="nome" placeholder="Digite o nome"
+                [(ngModel)]="cliente.nome">
+            <p>Email</p>
+            <input type="text" class="input" id="email" name="email" placeholder="Digite a email"
+                [(ngModel)]="cliente.email">
+            <p>Data de nascimento</p>
+            <input type="text" class="input" id="nascimento" name="nascimento" placeholder="Digite a data de nascimento"
+                [(ngModel)]="cliente.nascimento">
+            <p>CPF</p>
+            <input type="text" class="input" id="cpf" name="cpf" placeholder="Digite o cpf"
+                [(ngModel)]="cliente.cpf">
+            <p>CEP</p>
+            <input type="text" class="input" id="cep" name="cep" placeholder="Digite o cep"
+                [(ngModel)]="cliente.cep">
+            <p>Telefone</p>
+            <input type="text" class="input" id="telefone" name="telefone" placeholder="Digite o telefone"
+                [(ngModel)]="cliente.telefone">
+            <p>Gênero</p>
+            <select class="input" id="genero" name="genero" [(ngModel)]="cliente.genero">
+                <option value="" disabled selected>Selecione a categoria</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+            <div>
+                <button class="save-button" (click)="editarCliente()">Salvar</button>
+                <button class="cancel-button" (click)="cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </mat-card>
+</app-container>

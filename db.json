@@ -1,0 +1,582 @@
+{
+  "produtos": [
+    {
+      "id": 5654678,
+      "categoria": "placaMae",
+      "nome": "Gigabyte"
+    },
+    {
+      "id": 8797825,
+      "categoria": "placaMae",
+      "nome": "Gigabyte"
+    },
+    {
+      "id": 786815,
+      "categoria": "armazenamento",
+      "nome": "HD 500gb"
+    },
+    {
+      "id": 41756,
+      "categoria": "processador",
+      "nome": "AMD Ryzen"
+    },
+    {
+      "id": 5464521,
+      "categoria": "memoriaRam",
+      "nome": "Corsair 16GB"
+    },
+    {
+      "id": 455678,
+      "categoria": "monitor",
+      "nome": "Dell 24\""
+    },
+    {
+      "id": 89784,
+      "categoria": "mouse",
+      "nome": "Logitech"
+    },
+    {
+      "id": 546452,
+      "categoria": "placaMae",
+      "nome": "MSI"
+    },
+    {
+      "id": 645645,
+      "categoria": "processador",
+      "nome": "Intel i5"
+    },
+    {
+      "id": 876544,
+      "categoria": "armazenamento",
+      "nome": "SSD 1TB"
+    },
+    {
+      "id": 675244,
+      "categoria": "memoriaRam",
+      "nome": "Kingston 8GB"
+    },
+    {
+      "id": 546875,
+      "categoria": "monitor",
+      "nome": "Samsung 27\""
+    },
+    {
+      "id": 578645,
+      "categoria": "mouse",
+      "nome": "Microsoft"
+    },
+    {
+      "id": 764445,
+      "categoria": "teclado",
+      "nome": "Logitech"
+    },
+    {
+      "id": 2872547,
+      "categoria": "placaMae",
+      "nome": "ASRock"
+    },
+    {
+      "id": 278678,
+      "categoria": "processador",
+      "nome": "Intel i7"
+    },
+    {
+      "id": 287678,
+      "categoria": "armazenamento",
+      "nome": "HD 1TB"
+    },
+    {
+      "id": 39747,
+      "categoria": "memoriaRam",
+      "nome": "G.Skill 32GB"
+    },
+    {
+      "id": 578575,
+      "categoria": "monitor",
+      "nome": "LG 34\""
+    },
+    {
+      "id": 21785,
+      "categoria": "mouse",
+      "nome": "Razer"
+    },
+    {
+      "id": 278678,
+      "categoria": "teclado",
+      "nome": "Corsair"
+    },
+    {
+      "id": 87614,
+      "categoria": "placaMae",
+      "nome": "Biostar"
+    },
+    {
+      "id": 855572,
+      "categoria": "processador",
+      "nome": "AMD Threadripper"
+    },
+    {
+      "id": 245237,
+      "categoria": "armazenamento",
+      "nome": "SSD 500GB"
+    },
+    {
+      "id": 87244,
+      "categoria": "memoriaRam",
+      "nome": "Patriot 16GB"
+    },
+    {
+      "id": 893974,
+      "categoria": "monitor",
+      "nome": "Acer 32\""
+    },
+    {
+      "id": 872855,
+      "categoria": "mouse",
+      "nome": "SteelSeries"
+    },
+    {
+      "id": 5871171,
+      "categoria": "teclado",
+      "nome": "Cooler Master"
+    },
+    {
+      "id": 2542542,
+      "categoria": "processador",
+      "nome": "teste"
+    },
+    {
+      "id": 98651,
+      "categoria": "placaMae",
+      "nome": "teste2"
+    },
+    {
+      "id": 3583179219,
+      "categoria": "",
+      "nome": "teste3"
+    },
+    {
+      "id": 827069304,
+      "categoria": "placaMae",
+      "nome": "Teste4"
+    }
+  ],
+  "login": [
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 669
+    },
+    {
+      "email": "ana@email.com",
+      "senha": "password1",
+      "id": 9811
+    },
+    {
+      "email": "maria@email.com",
+      "senha": "abc123",
+      "id": 68465
+    },
+    {
+      "email": "joao@email.com",
+      "senha": "mypassword",
+      "id": 241
+    },
+    {
+      "email": "carla@email.com",
+      "senha": "senhaSegura",
+      "id": 61321
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 16847
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 32518
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "1234",
+      "id": 681232
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "123451232",
+      "id": 681233
+    },
+    {
+      "email": "nicolas@email.com",
+      "senha": "12345567",
+      "id": 681234
+    },
+    {
+      "id": 681235
+    },
+    {
+      "id": 681236
+    },
+    {
+      "id": 681237
+    },
+    {
+      "email": "",
+      "senha": "123",
+      "id": 681238
+    },
+    {
+      "email": "teste2@email.com",
+      "senha": "123",
+      "id": 681239
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681240
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681241
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681242
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681243
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681244
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681245
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681246
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681247
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681248
+    },
+    {
+      "email": "teste3@email.com",
+      "senha": "123",
+      "id": 681249
+    }
+  ],
+  "cadastros": [
+    {
+      "nome": "nicolas",
+      "nascimento": "09/12/2002",
+      "cpf": "12345678912",
+      "cep": "03050130",
+      "genero": "outro",
+      "telefone": "11940401388",
+      "email": "nicolas@email.com",
+      "confirmarEmail": "nicolas@email.com",
+      "senha": "1234",
+      "confirmarSenha": "1234",
+      "id": 65139
+    },
+    {
+      "nome": "mariana",
+      "nascimento": "23/05/1995",
+      "cpf": "98765432100",
+      "cep": "04567010",
+      "genero": "feminino",
+      "telefone": "11987654321",
+      "email": "mariana@email.com",
+      "confirmarEmail": "mariana@email.com",
+      "senha": "abcd",
+      "confirmarSenha": "abcd",
+      "id": 2794
+    },
+    {
+      "nome": "joao",
+      "nascimento": "15/08/1988",
+      "cpf": "11223344556",
+      "cep": "02241001",
+      "genero": "masculino",
+      "telefone": "11901234567",
+      "email": "joao@email.com",
+      "confirmarEmail": "joao@email.com",
+      "senha": "efgh",
+      "confirmarSenha": "efgh",
+      "id": 359
+    },
+    {
+      "nome": "carla",
+      "nascimento": "30/11/1979",
+      "cpf": "66554433221",
+      "cep": "01123030",
+      "genero": "feminino",
+      "telefone": "11987651234",
+      "email": "carla@email.com",
+      "confirmarEmail": "carla@email.com",
+      "senha": "ijkl",
+      "confirmarSenha": "ijkl",
+      "id": 1321
+    },
+    {
+      "nome": "pedro",
+      "nascimento": "05/02/1992",
+      "cpf": "22334455667",
+      "cep": "13040070",
+      "genero": "masculino",
+      "telefone": "11965437890",
+      "email": "pedro@email.com",
+      "confirmarEmail": "pedro@email.com",
+      "senha": "mnop",
+      "confirmarSenha": "mnop",
+      "id": 813
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "nascimento": "03/12/2001",
+      "cpf": "12345678912",
+      "cep": "12030240",
+      "email": "pedro@email.com",
+      "telefone": "11934352983",
+      "genero": "masculino"
+    },
+    {
+      "id": 2,
+      "nome": "Maria",
+      "nascimento": "15/06/1985",
+      "cpf": "98765432100",
+      "cep": "11020340",
+      "email": "maria@email.com",
+      "telefone": "1134567890",
+      "genero": "feminino"
+    },
+    {
+      "id": 3,
+      "nome": "João",
+      "nascimento": "22/09/1990",
+      "cpf": "11223344556",
+      "cep": "22040050",
+      "email": "joao@email.com",
+      "telefone": "1198765432",
+      "genero": "masculino"
+    },
+    {
+      "id": 4,
+      "nome": "Ana",
+      "nascimento": "05/02/1995",
+      "cpf": "55667788999",
+      "cep": "30120021",
+      "email": "ana@email.com",
+      "telefone": "3134567890",
+      "genero": "feminino"
+    },
+    {
+      "id": 5,
+      "nome": "Roberto",
+      "nascimento": "15/02/1982",
+      "cpf": "12345678901",
+      "cep": "11000001",
+      "email": "roberto@email.com",
+      "telefone": "1123456789",
+      "genero": "masculino"
+    },
+    {
+      "id": 6,
+      "nome": "Cláudia",
+      "nascimento": "22/03/1990",
+      "cpf": "23456789012",
+      "cep": "12000002",
+      "email": "claudia@email.com",
+      "telefone": "2123456789",
+      "genero": "feminino"
+    },
+    {
+      "id": 8,
+      "nome": "Sofia",
+      "nascimento": "29/09/1994",
+      "cpf": "45678901234",
+      "cep": "14000004",
+      "email": "sofia@email.com",
+      "telefone": "4145678901",
+      "genero": "feminino"
+    },
+    {
+      "id": 9,
+      "nome": "Miguel",
+      "nascimento": "11/11/1980",
+      "cpf": "56789012345",
+      "cep": "15000005",
+      "email": "miguel@email.com",
+      "telefone": "5156789012",
+      "genero": "masculino"
+    },
+    {
+      "id": 10,
+      "nome": "Luana",
+      "nascimento": "16/12/1992",
+      "cpf": "67890123456",
+      "cep": "16000006",
+      "email": "luana@email.com",
+      "telefone": "6167890123",
+      "genero": "feminino"
+    },
+    {
+      "id": 11,
+      "nome": "André",
+      "nascimento": "20/05/1985",
+      "cpf": "78901234567",
+      "cep": "17000007",
+      "email": "andre@email.com",
+      "telefone": "7178901234",
+      "genero": "masculino"
+    },
+    {
+      "id": 12,
+      "nome": "Tatiane",
+      "nascimento": "05/09/1989",
+      "cpf": "89012345678",
+      "cep": "18000008",
+      "email": "tatiane@email.com",
+      "telefone": "8189012345",
+      "genero": "feminino"
+    },
+    {
+      "id": 13,
+      "nome": "Paulo",
+      "nascimento": "26/06/1991",
+      "cpf": "90123456789",
+      "cep": "19000009",
+      "email": "paulo@email.com",
+      "telefone": "9190123456",
+      "genero": "masculino"
+    },
+    {
+      "id": 91272211,
+      "nome": "Teste",
+      "nascimento": "09/12/2002",
+      "cpf": "12345678932",
+      "cep": "11020340",
+      "telefone": "1134567890",
+      "email": "teste@email.com",
+      "genero": "masculino"
+    },
+    {
+      "id": 955140534,
+      "nome": "Teste2",
+      "nascimento": "09/12/2002",
+      "cpf": "1234",
+      "cep": "11020340",
+      "telefone": "1134567890",
+      "email": "teste2@email.com",
+      "genero": "femenino"
+    },
+    {
+      "id": 512474993,
+      "nome": "teste3",
+      "nascimento": "15/06/1985",
+      "cpf": "98765432100",
+      "cep": "11020340",
+      "telefone": "1134567890",
+      "email": "teste3@email.com",
+      "genero": "femenino"
+    },
+    {
+      "id": 212209273,
+      "nome": "Teste",
+      "nascimento": "09/12/2002",
+      "cpf": "98765432100",
+      "cep": "11020340",
+      "telefone": "1134567890",
+      "email": "teste@email.com",
+      "genero": "masculino"
+    },
+    {
+      "id": 150548809,
+      "nome": "teste2",
+      "nascimento": "09/12/2002",
+      "cpf": "98765432100",
+      "cep": "11020340",
+      "telefone": "1134567890",
+      "email": "teste2@email.com",
+      "genero": "femenino"
+    }
+  ],
+  "pedidos": [
+    {
+      "idPedido": 13213,
+      "status": "Pendente",
+      "cliente": 1,
+      "produto": [
+        6393
+      ],
+      "id": 5
+    },
+    {
+      "idPedido": 15435,
+      "status": "Pendente",
+      "cliente": 1,
+      "produto": [
+        429
+      ],
+      "id": 6
+    },
+    {
+      "idPedido": 23123,
+      "status": "Pendente",
+      "cliente": 1,
+      "produto": [
+        5654678,
+        5871171
+      ],
+      "id": 7
+    },
+    {
+      "idPedido": 141232,
+      "status": "Pendente",
+      "cliente": 3,
+      "produto": [
+        5654678
+      ],
+      "id": 8
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": 5,
+      "produto": [
+        5654678
+      ],
+      "id": 9
+    },
+    {
+      "idPedido": 1,
+      "status": "Pendente",
+      "cliente": 512474993,
+      "produto": [
+        5654678,
+        786815
+      ],
+      "id": 10
+    }
+  ]
+}
